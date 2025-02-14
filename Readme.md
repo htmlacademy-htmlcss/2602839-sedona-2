@@ -2,6 +2,7 @@
 
 * Студент: [Александр Колесников](https://up.htmlacademy.ru/htmlcss-individual/2/user/2602839).
 * Наставник: `Неизвестно`.
+* Сайт: (https://alexkolbe.github.io/2602839-sedona-2/).
 
 ---
 
