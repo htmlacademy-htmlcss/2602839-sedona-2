@@ -3,7 +3,11 @@
 * Студент: [Александр Колесников](https://up.htmlacademy.ru/htmlcss-individual/2/user/2602839).
 * Наставник: `Неизвестно`.
 * Сайт: (https://alexkolbe.github.io/2602839-sedona-2/).
+* Обзор макета можно скачать по ссылке: (https://disk.yandex.ru/d/z7euXlqkwLNrMg).
+* Макет можно посмотреть по ссылке: (https://www.figma.com/file/ttNcJqi4MtvILk6rlovwid).
 
+
+<img width="769" alt="заставка макета Седона" src="https://up.htmlacademy.ru/assets/intensives/htmlcss-individual/2/projects/sedona/image.jpg?v=202502081021">
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
