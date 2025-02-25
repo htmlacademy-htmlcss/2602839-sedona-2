@@ -50,8 +50,8 @@
       </nav>
     </header>
 
-    <main class="page-catalog">
-      <section class="filter">
+    <main class="page-catalog" data-test="main">
+      <section class="filter" data-test="filter">
         <h1 class="catalog-page-title">
           Гостиницы Седоны
         </h1>
@@ -136,7 +136,7 @@
           </form>
         </div>
       </section>
-      <section class="hotels">
+      <section class="hotels" data-test="catalog">
         <h2 class="visually-hidden">
           Гостиницы
         </h2>
@@ -313,11 +313,23 @@
           </li>
         </ul>
       </section>
+      <section class="subscribe subscribe-catalog" data-test="subscribe">
+        <h2 class="sudscribe-title">
+          Подпишитесь на рассылку
+        </h2>
+        <p class="subscribe-text">
+          Подпишитесь на рассылку
+        </p>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+          <input class="subscribe-email" type="email" name="subscribe-email" placeholder="Ваш e-mail">
+          <button class="subscribe-button" type="submit">Подписаться</button>
+        </form>
+      </section>
 
     </main>
 
 
-    <footer class="page-footer">
+    <footer class="page-footer" data-test="footer">
       <section class="footer-social">
         <ul class="footer-social-list">
           <li class="footer-social-item">
