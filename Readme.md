@@ -7,7 +7,8 @@
 * Макет можно посмотреть по ссылке: (https://www.figma.com/file/ttNcJqi4MtvILk6rlovwid).
 
 
-<img width="769" height="478" alt="заставка макета Седона" src="https://up.htmlacademy.ru/assets/intensives/htmlcss-individual/2/projects/sedona/image.jpg?v=202502081021">
+<img width="769" alt="заставка макета Седона" src="https://up.htmlacademy.ru/assets/intensives/htmlcss-individual/2/projects/sedona/image.jpg?v=202502081021">
+
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
