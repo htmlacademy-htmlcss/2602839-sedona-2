@@ -14,7 +14,7 @@
       <nav class="header-navigation navigation">
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link current" href="#">
+            <a class="navigation-link current" href="#" aria-current="page">
               Главная
             </a>
           </li>
@@ -29,7 +29,7 @@
             </a>
           </li>
         </ul>
-        <ul class="navigation-list">
+        <ul class="navigation-user">
           <li class="navigation item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">Поиск</span>
@@ -37,7 +37,7 @@
           </li>
           <li class="navigation item">
             <a class="navigation-link" href="#">
-              <span class="visually-hidden">Избранное</span>
+              <span class="visually-hidden">Избранное</span><span class="favotite-count">12</span>
             </a>
           </li>
           <li class="navigation item">
@@ -52,7 +52,7 @@
     <main class="main-page" data-test="main">
       <section class="hero" data-test="hero">
         <h1 class="visually-hidden">
-          Седона
+          Седона - город в Аризоне
         </h1>
 
         <img class="hero-welcome-logo" src="#"
@@ -178,6 +178,9 @@
 
     <footer class="page-footer" data-test="footer">
       <section class="footer-social">
+        <h2 class="visually-hidden">
+          Социальные сети
+        </h2>
         <ul class="footer-social-list">
           <li class="footer-social-item">
             <a class="footer-social-link" href="#">
@@ -191,7 +194,7 @@
           </li>
           <li class="footer-social-item">
             <a class="footer-social-link" href="#">
-              <img class="footer-social-img" src="#" alt="Youtube">
+              <img class="footer-social-img" src="#" alt="Ютуб">
             </a>
           </li>
         </ul>

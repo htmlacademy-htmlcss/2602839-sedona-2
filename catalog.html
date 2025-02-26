@@ -25,12 +25,12 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link current">
+            <a class="navigation-link current" aria-current="page">
               Гостиницы
             </a>
           </li>
         </ul>
-        <ul class="navigation-list">
+        <ul class="navigation-user">
           <li class="navigation item">
             <a class="navigation-link" href="#">
               <span class="visually-hidden">Поиск</span>
@@ -38,7 +38,7 @@
           </li>
           <li class="navigation item">
             <a class="navigation-link" href="#">
-              <span class="visually-hidden">Избранное</span>
+              <span class="visually-hidden">Избранное</span><span class="like-number">12</span>
             </a>
           </li>
           <li class="navigation item">
@@ -57,23 +57,23 @@
         </h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-item-link" href="">
+            <a class="breadcrumbs-item-link" href="index.html">
               <img class="bradcrumbs-home" src="#" alt="переход на Главную">
             </a>
           </li>
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-item-link" href="index.html">
+            <a class="breadcrumbs-item-link" aria-current="page">
               Гостиницы
             </a>
           </li>
         </ul>
         <div class="filter-wrapper">
           <h2 class="visually-hidden">Фильтры поиска гостиниц</h2>
-          <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="post">
-            <div class="infrastructure">
-              <h3 class="filter-title">
+          <form class="catalog-filters" action="https://echo.htmlacademy.ru/" method="get">
+            <fieldset class="filter-group">
+              <legend class="filter-group-title">
                 Инфраструктура:
-              </h3>
+              </legend>
               <ul class="infrastructure-list">
                 <li class="infrastructure-item">
                   <input class="custom-checkbox" type="checkbox" name="infrastructure" id="pool" value="pool" checked>
@@ -89,11 +89,11 @@
                   <label for="wifi">Wi-Fi</label>
                 </li>
               </ul>
-            </div>
-            <div class="housing-type">
-              <h3 class="filter-title">
+            </fieldset>
+            <fieldset class="filter-group">
+              <legend class="filter-group-title">
                 Тип жилья:
-              </h3>
+              </legend>
               <ul class="housing-type-list">
                 <li class="housing-type-item">
                   <input class="custom-radio" type="radio" name="hotel" value="hotel" id="hotel" checked>
@@ -108,11 +108,11 @@
                   <label for="appartments">Апартаменты</label>
                 </li>
               </ul>
-            </div>
-            <div class="cost">
-              <h3 class="filter-title">
+            </fieldset>
+            <fieldset class="filter-group">
+              <legend class="filter-group-title">
                 Стоимость, ₽:
-              </h3>
+              </legend>
               <div class="cost-range">
                 <label class="cost-range-start">
                   <input class="start-cost" type="number" value="0"><span>от</span>
@@ -124,7 +124,7 @@
 
               <!-- Здесь надо разметить бегунки для цен-->
 
-            </div>
+            </fieldset>
             <div class="filter-buttons">
               <button class="filter-buttons-accept" type="submit">
                 Применить
@@ -178,15 +178,17 @@
               </p>
             </div>
             <div class="hotels-item-buttons">
-              <p class="hotels-item-detail">
+              <a class="hotels-item-detail" href="#">
                 подробнее
-              </p>
-              <p class="hotels-item-favorites-checked">
+              </a>
+              <button class="hotels-item-favorites-button" type="submit">
                 в избранное
-              </p>
+              </button>
             </div>
             <div class="hotels-item-raitings">
-              <img class="hotels-item-raiting-star" src="#" alt="Звёзды Отеля">
+              <p class="four-star">
+                <span class="visually-hidden">Отель четыре звезды</span>
+              </p>
               <p class="hotels-item-raiting">Рейтинг: <span>8,5</span></p>
             </div>
           </li>
@@ -206,15 +208,17 @@
               </p>
             </div>
             <div class="hotels-item-buttons">
-              <p class="hotels-item-detail">
+              <a class="hotels-item-detail" href="#">
                 подробнее
-              </p>
-              <p class="hotels-item-favorites-checked">
+              </a>
+              <button class="hotels-item-favorites-button favorite-checked" type="submit">
                 в избранном
-              </p>
+              </button>
             </div>
             <div class="hotels-item-raiting">
-              <img class="hotels-item-star" src="#" alt="Звёзды Отеля">
+              <p class="four-star">
+                <span class="visually-hidden">Отель четыре звезды</span>
+              </p>
               <p class="hotels-item-raiting">Рейтинг: <span>9,2</span></p>
             </div>
           </li>
@@ -234,15 +238,17 @@
               </p>
             </div>
             <div class="hotels-item-buttons">
-              <p class="hotels-item-detail">
+              <a class="hotels-item-detail" href="#">
                 подробнее
-              </p>
-              <p class="hotels-item-favorites-checked">
+              </a>
+              <button class="hotels-item-favorites-button" type="submit">
                 в избранное
-              </p>
+              </button>
             </div>
             <div class="hotels-item-raiting">
-              <img class="hotels-item-star" src="#" alt="Звёзды Отеля">
+              <p class="three-star">
+                <span class="visually-hidden">Отель три звезды</span>
+              </p>
               <p class="hotels-item-raiting">Рейтинг: <span>6,9</span></p>
             </div>
           </li>
@@ -262,15 +268,17 @@
               </p>
             </div>
             <div class="hotels-item-buttons">
-              <p class="hotels-item-detail">
+              <a class="hotels-item-detail" href="#" type="submit">
                 подробнее
-              </p>
-              <p class="hotels-item-favorites-checked">
+              </a>
+              <button class="hotels-item-favorites-button">
                 в избранное
-              </p>
+              </button>
             </div>
             <div class="hotels-item-raiting">
-              <img class="hotels-item-star" src="#" alt="Звёзды Отеля">
+              <p class="two-star">
+                <span class="visually-hidden">Отель две звезды</span>
+              </p>
               <p class="hotels-item-raiting">Рейтинг: <span>5,0</span></p>
             </div>
           </li>
@@ -331,6 +339,9 @@
 
     <footer class="page-footer" data-test="footer">
       <section class="footer-social">
+        <h2 class="visually-hidden">
+          Социальные сети
+        </h2>
         <ul class="footer-social-list">
           <li class="footer-social-item">
             <a class="footer-social-link" href="#">
@@ -344,7 +355,7 @@
           </li>
           <li class="footer-social-item">
             <a class="footer-social-link" href="#">
-              <img class="footer-social-img" src="#" alt="Youtube">
+              <img class="footer-social-img" src="#" alt="Ютуб">
             </a>
           </li>
         </ul>
