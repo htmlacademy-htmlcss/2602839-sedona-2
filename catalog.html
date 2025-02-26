@@ -96,15 +96,15 @@
               </legend>
               <ul class="housing-type-list">
                 <li class="housing-type-item">
-                  <input class="custom-radio" type="radio" name="hotel" value="hotel" id="hotel" checked>
+                  <input class="custom-radio" type="radio" name="housing-type" value="hotel" id="hotel" checked>
                   <label for="hotel">Отель</label>
                 </li>
                 <li class="housing-type-item">
-                  <input class="custom-radio" type="radio" name="motel" value="motel" id="motel">
+                  <input class="custom-radio" type="radio" name="housing-type" value="motel" id="motel">
                   <label for="motel">Мотель</label>
                 </li>
                 <li class="housing-type-item">
-                  <input class="custom-radio" type="radio" name="appartments" value="appartments" id="appartments">
+                  <input class="custom-radio" type="radio" name="housing-type" value="appartments" id="appartments">
                   <label for="appartments">Апартаменты</label>
                 </li>
               </ul>
@@ -115,10 +115,14 @@
               </legend>
               <div class="cost-range">
                 <label class="cost-range-start">
-                  <input class="start-cost" type="number" value="0"><span>от</span>
+                  <span class="visually-hidden">Цена от</span>
+                  <input class="start-cost" type="number" value="0" name="min-price" min="0" required>
+                  <span>от</span>
                 </label>
                 <label>
-                  <input class="end-cost" type="number" value="9000"><span>до</span>
+                  <span class="visually-hidden">Цена до</span>
+                  <input class="end-cost" type="number" value="9000" name="max-price" min="0" required>
+                  <span>до</span>
                 </label>
               </div>
 
@@ -137,13 +141,10 @@
         </div>
       </section>
       <section class="hotels" data-test="catalog">
-        <h2 class="visually-hidden">
-          Гостиницы
-        </h2>
         <div class="hotels-wrapper">
-          <p class="hotels-found">
+          <h2 class="hotels-found">
             Найдено гостиниц: <span>38</span>
-          </p>
+          </h2>
           <select class="hotels-control" aria-label="Сортировка">
             <option value="cheap">
               Сначала дешёвые
@@ -268,10 +269,10 @@
               </p>
             </div>
             <div class="hotels-item-buttons">
-              <a class="hotels-item-detail" href="#" type="submit">
+              <a class="hotels-item-detail" href="#">
                 подробнее
               </a>
-              <button class="hotels-item-favorites-button">
+              <button class="hotels-item-favorites-button" type="submit">
                 в избранное
               </button>
             </div>
