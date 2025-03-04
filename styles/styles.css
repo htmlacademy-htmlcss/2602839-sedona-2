@@ -16,8 +16,8 @@
 
 body {
   font-family: "PT Sans", sans-serif;
-  font-size: 22px;
-  line-height: 118%;
+  font-size: 18px;
+  line-height: 21px;
   font-weight: 400;
   font-style: normal;
   color: #000000;
@@ -26,32 +26,30 @@ body {
   text-decoration: none;
 }
 
-ul {
-  list-style-type: none;
-}
-
-a {
+.navigation-link,
+.interested-link,
+.hotels-item-detail,
+.footer-social-link,
+.hotels-sort-link,
+.hotels-item-link,
+.pagination-link {
   color: inherit;
   text-decoration: none;
 }
 
-
+.list {
+  list-style-type: none;
+}
 
 .page-header {
   font-size: 20px;
-  line-height: 120%;
+  line-height: 24px;
   font-weight: 700;
   text-transform: capitalize;
 }
 
-a.button {
-
+.button {
   color: #ffffff;
-}
-
-.navigation-link.button,
-.interested-link.button,
-.hotels-item-detail.button {
   background-color: #756157;
 }
 
@@ -63,7 +61,7 @@ a.button {
 
 .section-title {
   font-size: 30px;
-  line-height: 120%;
+  line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -78,13 +76,14 @@ a.button {
 
 
 
-address {
+address .contact-link {
   font-style: normal;
+  text-decoration: none;
 }
 
 .footer-contacts {
   font-size: 40px;
-  line-height: 100%;
+  line-height: 40px;
   text-transform: uppercase;
   text-align: center;
 }
