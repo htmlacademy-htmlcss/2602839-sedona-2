@@ -44,10 +44,14 @@ a {
   text-transform: capitalize;
 }
 
+a.button {
+
+  color: #ffffff;
+}
+
 .navigation-link.button,
 .interested-link.button,
 .hotels-item-detail.button {
-  color: #ffffff;
   background-color: #756157;
 }
 
