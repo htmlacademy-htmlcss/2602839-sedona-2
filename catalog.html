@@ -120,7 +120,7 @@
                   <input class="start-cost" type="number" value="0" name="min-price" min="0" required>
                   <span>от</span>
                 </label>
-                <label>
+                <label class="cost-range-end">
                   <span class="visually-hidden">Цена до</span>
                   <input class="end-cost" type="number" value="9000" name="max-price" min="0" required>
                   <span>до</span>
@@ -158,7 +158,7 @@
             </option>
           </select>
           <div class="hotels-sort">
-            <a class="hotels-sort-table hotels-sort-link" href="#"><span class="visually-hidden">Таблицей</span></a>
+            <a class="hotels-sort-table hotels-sort-link hotels-sort-selected" href="#"><span class="visually-hidden">Таблицей</span></a>
             <a class="hotels-sort-card hotels-sort-link" href="#"><span class="visually-hidden">Карточками</span></a>
             <a class="hotels-sort-list hotels-sort-link" href="#"><span class="visually-hidden">Списком</span></a>
           </div>
@@ -336,10 +336,10 @@
           Подпишитесь на рассылку
         </h2>
         <p class="subscribe-text">
-          Подпишитесь на рассылку
+          Только полезная информация и никакого спама, честное бойскаутское!
         </p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-          <input class="subscribe-email" type="email" name="subscribe-email" placeholder="Ваш e-mail">
+          <input class="subscribe-email" type="email" name="subscribe-email" placeholder="Ваш e-mail" required>
           <button class="subscribe-button" type="submit">Подписаться</button>
         </form>
       </section>
