@@ -78,7 +78,11 @@ body {
 }
 
 .hero {
-  background: #333333 url("../images/index-background.jpg") no-repeat center/cover;
+  background-color: #333333;
+  background-image: url("../images/vector.svg"),url("../images/index-background.jpg");
+  background-repeat: no-repeat;
+  background-position: left bottom, left top;
+  background-size: 100% auto, cover;
 }
 
 .section-title {
