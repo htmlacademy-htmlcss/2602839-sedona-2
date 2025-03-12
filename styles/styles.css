@@ -78,9 +78,7 @@ body {
 }
 
 .hero {
-  background-image: url("../images/index-background.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background: #333333 url("../images/index-background.jpg") no-repeat center/cover;
 }
 
 .section-title {
@@ -139,6 +137,10 @@ body {
   color: #000000;
 }
 
+.advice-item:nth-child(2n+1) {
+  background: rgba(131, 179, 211, 0.12);
+}
+
 .interested-link.button {
   font-size: 20px;
   line-height: 36px;
@@ -162,6 +164,7 @@ body {
   line-height: 24px;
   color: #000000;
   opacity: 0.6;
+  font-family: inherit;
 }
 
 .subscribe-button {
@@ -173,7 +176,7 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-
+  font-family: inherit;
   border: none;
 
 }
@@ -228,6 +231,7 @@ address .contact-link {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+  font-family: inherit;
 }
 
 .cost-range-start span,
@@ -245,6 +249,7 @@ address .contact-link {
   font-weight: 700;
   text-transform: uppercase;
   border: none;
+  font-family: inherit;
 }
 
 .filter-buttons-accept {
@@ -270,6 +275,7 @@ address .contact-link {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+  font-family: inherit;
 }
 
 .hotels-sort-link {
@@ -308,10 +314,12 @@ address .contact-link {
   text-transform: uppercase;
   background-color: #82b3d3;
   border: none;
+  font-family: inherit;
 }
 
 .hotels-item-favorites-button.favorite-checked {
   background-color: #7db54f;
+  font-family: inherit;
 }
 
 .hotels-item-raiting {
