@@ -1,3 +1,4 @@
+/* Подключаем шрифты */
 @font-face {
   font-family: "PT Sans";
   src: url("../fonts/ptsans-400.woff2") format("woff2");
@@ -13,6 +14,8 @@
   font-style: normal;
   font-display: swap;
 }
+
+/* Общие стили */
 
 *,
 *::before,
@@ -78,6 +81,16 @@ body {
   background-color: #756157;
 }
 
+.section-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+/* Шапка сайта */
+
 .page-header {
   font-size: 20px;
   line-height: 24px;
@@ -86,6 +99,12 @@ body {
   color: #000000;
   display: flex;
   justify-content: start;
+
+  height: 64px;
+}
+
+.header-logo {
+  margin: 0 0 0 70px;
 }
 
 
@@ -98,10 +117,29 @@ body {
 
 .navigation-list {
   display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.navigation-list.list {
+  margin: 0;
+}
+
+.navigation-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navigation-user {
   display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 32px;
+}
+
+.navigation-user.list {
+  margin: 0 70px 0 0;
 }
 
 .navigation-link.button {
@@ -110,6 +148,13 @@ body {
   line-height: 20px;
   font-weight: 700;
 }
+
+.navigation-item .button {
+  padding: 8px 34px;
+  border-radius: 4px;
+}
+
+/* HERO блок */
 
 .hero {
   background-color: #333333;
@@ -122,20 +167,15 @@ body {
   min-height: 485px;
 }
 
-
-
+.hero-welcome-logo {
+  margin-top: 52px;
+}
 
 .main-container {
   flex-grow: 1;
 }
 
-.section-title {
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #000000;
-}
+/* блок REASONS */
 
 .reasons {
   text-align: center;
@@ -150,6 +190,8 @@ body {
   font-size: 22px;
   line-height: 28px;
 }
+
+/* ADVANTAGES */
 
 .advantages-list {
   margin: 0;
@@ -227,6 +269,8 @@ body {
   flex-direction: row-reverse;
 }
 
+/* SLOGAN */
+
 .slogan {
   text-align: center;
   margin: 64px auto;
@@ -242,6 +286,8 @@ body {
   margin: 20px 355px;
 }
 
+/* ADVICE */
+
 .advice-list {
   display: flex;
   padding: 0;
@@ -254,6 +300,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   min-height: 385px;
+  padding: 81px 85px;
 }
 
 .advice-item:nth-child(2n+1) {
@@ -271,6 +318,8 @@ body {
 .advice-item-text {
   text-align: center;
 }
+
+/* INTERESTED */
 
 .interested {
   display: flex;
@@ -299,6 +348,8 @@ body {
   padding: 8px 50px;
   border-radius: 4px;
 }
+
+/* SUBSCRIBE */
 
 .subscribe {
   color: #ffffff;
@@ -360,13 +411,14 @@ body {
   border-bottom-right-radius: 4px;
 }
 
-
+/* FOOTER сайта */
 
 .page-footer {
   display: flex;
   justify-content: space-between;
-
+  align-items: center;
   margin: 40px 70px 30px;
+  height: 70px;
 }
 
 .footer-social-list {
@@ -394,6 +446,8 @@ address .contact-link {
   text-align: center;
 }
 
+/* FILTER catalog  */
+
 .filter {
   color: #ffffff;
   background: #f2f2f2 url("../images/filtr.jpg") no-repeat center / cover;
@@ -405,21 +459,26 @@ address .contact-link {
   line-height: 78px;
   font-weight: 700;
   text-transform: capitalize;
+  margin: 0 0 0 70px;
+  padding: 35px 0 8px;
 }
 
 .breadcrumbs {
   display: flex;
   justify-content: start;
   padding: 0;
+  margin: 0 0 40px 70px;
 }
 
 .catalog-filters {
   display: flex;
   justify-content: space-between;
+  margin: 0 70px;
 }
 
 .filter-group {
   border: none;
+  padding: 0;
 }
 
 .filter-group-title {
@@ -427,22 +486,35 @@ address .contact-link {
   line-height: 24px;
   font-weight: 700;
   text-transform: capitalize;
+  margin-bottom: 32px;
 }
 
-.infrastructure-list {
+.infrastructure-list.list {
   padding: 0;
+  margin: 0;
+}
+
+.filter-group .infrastructure-list {
+  margin-right: 70px;
 }
 
 .infrastructure-item {
   line-height: 23px;
+  margin-bottom: 16px;
 }
 
-.housing-type-list {
+.housing-type-list.list {
   padding: 0;
+  margin: 0;
+}
+
+.filter-group .housing-type-list {
+  margin-right: 140px;
 }
 
 .housing-type-item {
   line-height: 23px;
+  margin-bottom: 16px;
 }
 
 .start-cost,
@@ -465,6 +537,8 @@ address .contact-link {
 .filter-buttons {
   display: flex;
   flex-direction: column;
+  margin-top: 56px;
+  gap: 32px;
 }
 
 .filter-buttons-accept,
@@ -486,7 +560,10 @@ address .contact-link {
 
 .filter-buttons-cancel {
   background: none;
+  border-radius: 4px;
 }
+
+/* HOTELS catalog */
 
 .hotels {
   display: flex;
@@ -498,6 +575,7 @@ address .contact-link {
 .hotels-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .hotels-found {
@@ -516,6 +594,11 @@ address .contact-link {
   line-height: 21px;
   color: #333333;
   font-family: inherit;
+  padding-left: 12px;
+}
+
+.hotels-control option {
+  padding-left: 20px;
 }
 
 .hotels-sort-link {
@@ -523,6 +606,7 @@ address .contact-link {
   height: 48px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  background: none;
 }
 
 .hotels-sort-selected {
@@ -546,6 +630,7 @@ address .contact-link {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 340px;
 }
 
 .hotels-item-title {
@@ -575,7 +660,7 @@ address .contact-link {
 
 .hotels-item-buttons {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 10px;
 }
 
@@ -606,6 +691,7 @@ address .contact-link {
 .hotels-item-favorites-button.favorite-checked {
   background-color: #7db54f;
   font-family: inherit;
+  padding: 8px 18px;
 }
 
 .hotels-item-raitings {
@@ -622,12 +708,14 @@ address .contact-link {
   background-color: #f2f2f2;
   border-radius: 4px;
   margin: 0;
-
+  white-space: pre;
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
+
+/* PAGINATION catalog */
 
 .pagination {
   padding: 40px 70px 60px;
@@ -651,12 +739,30 @@ address .contact-link {
   line-height: 36px;
   font-weight: 700;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.pagination-item .pagination-current {
+.pagination-item.pagination-current {
   color: #000000;
   background-color: #f2f2f2;
 }
+
+.pagination-item.pagination-dotted {
+  color: #000000;
+  background: none;
+}
+
+.pagination-dotted .pagination-link{
+  font-size: 18px;
+  line-height: 26px;
+}
+
+
+
+
+/* SUBSCRIBE catalog */
 
 .subscribe-catalog {
   background-color: #ffffff;
