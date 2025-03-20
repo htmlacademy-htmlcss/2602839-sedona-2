@@ -117,11 +117,13 @@ ul.navigation-user {
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
+  flex-wrap: wrap;
 }
 
 .navigation-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   /* gap: 32px; */
 }
 
@@ -146,6 +148,7 @@ ul.navigation-user {
   display: flex;
   justify-content: end;
   align-items: center;
+  flex-wrap: wrap;
   /* gap: 32px; */
 }
 
@@ -231,6 +234,7 @@ ul.navigation-user {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-wrap: wrap;
   box-sizing: border-box;
   width: 400px;
   height: 100%;
@@ -358,6 +362,7 @@ ul.navigation-user {
 .interested {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   margin: 96px 304px;
 }
@@ -408,6 +413,7 @@ ul.navigation-user {
 .subscribe-form {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .subscribe-email {
@@ -451,6 +457,7 @@ ul.navigation-user {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin: 0 auto;
   padding: 40px 70px 30px;
 
@@ -463,6 +470,7 @@ ul.navigation-user {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 0;
 }
 
@@ -666,27 +674,34 @@ address .contact-link {
 }
 
 .hotels-list {
-  display: flex;
-  justify-content: start;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   padding: 0;
   margin: 0;
 }
 
 .hotels-item {
-  border: 1px solid #e6e6e6;
+  outline: 1px solid #e6e6e6;
   border-radius: 4px;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  width: 340px;
+  display: grid;
+  grid-template-rows: 212px 1fr;
+  grid-template-columns: repeat(2, 140px);
+  gap: 16px 20px;
+  align-items: center;
+}
+
+.hotels-item-link {
+  color: inherit;
+  text-decoration: none;
+  grid-column: span 2;
 }
 
 .hotels-item-title {
   padding: 0;
   margin: 0;
+  grid-column: span 2;
 }
 
 .hotels-item-title a {
@@ -696,23 +711,13 @@ address .contact-link {
   text-transform: capitalize;
 }
 
-.hotels-item-type-price {
-  display: flex;
-  justify-content: space-between;
-}
-
 .hotels-item-type {
   margin: 0;
 }
 
 .hotel-item-price {
   margin: 0;
-}
-
-.hotels-item-buttons {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
+  justify-self: end;
 }
 
 .hotels-item-detail {
