@@ -63,7 +63,6 @@ body {
 }
 
 .interested-link,
-.hotels-item-detail,
 .footer-social-link,
 .hotels-sort-link,
 .hotels-item-link,
@@ -81,6 +80,31 @@ body {
   cursor: pointer;
   color: #ffffff;
   background-color: #756157;
+
+
+
+  :hover {
+    background-color: #615048;
+    outline: 1px solid #615048;
+    border-radius: 4px;
+  }
+
+  :focus-visible {
+    background-color: #615048;
+    outline: 1px solid #615048;
+    border-radius: 4px;
+  }
+
+  :focus {
+    background-color: #615048;
+    outline: 1px solid #615048;
+    border-radius: 4px;
+  }
+
+  :active {
+    background-color: #756157;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .section-title {
@@ -102,13 +126,15 @@ body {
   display: flex;
   justify-content: start;
 
-  /* height: 64px; */
 }
 
 .header-logo {
   display: block;
   margin: 0 28px 0 70px;
   cursor: pointer;
+  position: relative;
+  margin-bottom: -11px;
+  z-index: 2;
 }
 
 ul.navigation-list,
@@ -128,23 +154,23 @@ ul.navigation-user {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* gap: 32px; */
+
 }
 
 .navigation-list.list {
   margin: 0;
 }
 
-.navigation-item {
+.navigation-list-item {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.navigation-link {
+.navigation-list-link {
+  display: block;
   color: inherit;
   text-decoration: none;
-  display: block;
   padding: 20px 16px;
 }
 
@@ -153,14 +179,52 @@ ul.navigation-user {
   justify-content: end;
   align-items: center;
   flex-wrap: wrap;
-  /* gap: 32px; */
 }
+
+/* .navigation-user .navigation-item:not(:last-child) {
+  min-height: 64px;
+
+} */
 
 .navigation-user.list {
   margin-right: 70px;
 }
 
-.navigation-link.button {
+.navigation-user-item {
+  position: relative;
+}
+
+.navigation-user-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  padding-left: 23px;
+  padding-right: 23px;
+}
+
+.navigation-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  color: #000000;
+}
+
+.navigation-icon:hover {
+  color: #756157;
+}
+
+.navigation-icon:focus-visible {
+  outline: 1px solid #83b3d3;;
+}
+
+.navigation-icon:active {
+  color: rgba(117, 61, 57, 0.3);
+}
+
+.navigation-user-link.button {
   text-transform: uppercase;
   font-size: 16px;
   line-height: 20px;
@@ -168,9 +232,25 @@ ul.navigation-user {
   display: block;
   padding: 8px 34px;
   color: #ffffff;
+  margin-left: 20px;
 }
 
-.navigation-item .button {
+.like-number {
+  position: absolute;
+  right: 5px;
+  bottom: 0;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: #7db54f;
+  padding: 5px;
+  color: #ffffff;
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navigation-user-item .button {
   border-radius: 4px;
 }
 
@@ -199,7 +279,7 @@ ul.navigation-user {
 
 .reasons {
   text-align: center;
-  padding: 69px 275px;
+  padding: 69px 274px 90px;
 }
 
 .reasons-title {
@@ -209,6 +289,7 @@ ul.navigation-user {
 .reasons-text {
   font-size: 22px;
   line-height: 28px;
+  margin: 0;
 }
 
 /* ADVANTAGES */
@@ -242,9 +323,7 @@ ul.navigation-user {
   box-sizing: border-box;
   width: 400px;
   height: 100%;
-
 }
-
 .advantages-item img {
   height: 100%;
 }
@@ -256,6 +335,24 @@ ul.navigation-user {
   text-transform: uppercase;
   text-align: center;
   margin: 0;
+  padding-bottom: 30px;
+  position: relative;
+}
+
+.advantages-item-title::after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 60px;
+  height: 2px;
+  content: "";
+}
+
+.advantages-item-wide .advantages-card .advantages-item-title::after {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .advantages-item-text {
@@ -330,12 +427,13 @@ ul.navigation-user {
   justify-content: center;
   flex-wrap: wrap;
   padding: 0;
+  margin: 0;
 }
 
 .advice-item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   flex-wrap: wrap;
   min-height: 385px;
@@ -354,6 +452,18 @@ ul.navigation-user {
   text-transform: uppercase;
   color: #000000;
   margin: 0 auto;
+}
+
+.advice-item-title-house::before {
+  background: url("../images/icons/house.svg") no-repeat center / cover;
+}
+
+.advice-item-title-food::before {
+  background: url("../images/icons/food.svg") no-repeat center / cover;
+}
+
+.advice-item-title-souvenirs::before {
+  background: url("../images/icons/souvenirs.svg") no-repeat center / cover;
 }
 
 .advice-item-text {
@@ -480,12 +590,29 @@ ul.navigation-user {
 }
 
 .footer-social-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 40px;
+  color: #83b3d3;
 
+  :hover {
+    color: #68a2ca;
+  }
 
-  /* временный размер ПОТОМ поменять на отступы ВОЗМОЖНО */
-  /* width: 47px;
-  height: 40px; */
+  :focus-visible {
+    color: #68a2ca;
+  }
+
+  :focus {
+    color: #68a2ca;
+  }
+
+  :active {
+    color: rgba(104, 162, 202, 0.3);
+  }
+
 }
 
 address .contact-link {
@@ -493,7 +620,7 @@ address .contact-link {
   padding: 5px 0;
   font-style: normal;
   text-decoration: none;
-  color: #000000;
+  color: inherit;
 }
 
 .footer-contacts {
@@ -501,12 +628,46 @@ address .contact-link {
   line-height: 40px;
   text-transform: uppercase;
   text-align: center;
+  color: #000000;
+
+
+  :hover {
+    color: #756157;
+  }
+
+  :focus-visible {
+    color: #756157;
+  }
+
+  :focus {
+    color: #756157;
+  }
+
+  :active {
+    color: rgba(117, 97, 87, 0.3);
+  }
 }
 
-.footer-lofo-htmlacademy-link {
+.footer-logo-htmlacademy-link {
   display: block;
-
   padding: 8px 0;
+  color: #000000;
+
+  :hover {
+    color: #756157;
+  }
+
+  :focus-visible {
+    color: #756157;
+  }
+
+  :focus {
+    color: #756157;
+  }
+
+  :active {
+    color: rgba(117, 97, 87, 0.3);
+  }
 }
 
 /* FILTER catalog  */
@@ -585,7 +746,7 @@ address .contact-link {
 }
 
 .filter-group.cost-rane-group {
-    /* отступ на макете 70px */
+  /* отступ на макете 70px */
   /* margin-left: 70px; */
 }
 
@@ -738,6 +899,7 @@ address .contact-link {
 }
 
 .hotels-item-detail {
+  display: inline-block;
   color: #ffffff;
   text-decoration: none;
   font-size: 16px;
@@ -746,6 +908,7 @@ address .contact-link {
   text-transform: uppercase;
   padding: 8px 26px;
   border-radius: 4px;
+
 }
 
 .hotels-item-favorites-button {
@@ -768,6 +931,7 @@ address .contact-link {
   background-color: #7db54f;
   font-family: inherit;
   padding: 8px 18px;
+
 }
 
 .hotels-item-raitings {
@@ -805,9 +969,16 @@ address .contact-link {
   gap: 10px;
 }
 
-.pagination-item {
+.pagination-link {
+  display: block;
   width: 60px;
   height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-item {
   background-color: #82b3d3;
   border-radius: 4px;
   color: #ffffff;
@@ -815,19 +986,90 @@ address .contact-link {
   line-height: 36px;
   font-weight: 700;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  cursor: pointer;
+
+  :hover {
+    background-color: #68a2ca;
+    outline: 1px solid #82b3d3;
+    border-radius: 4px;
+  }
+
+  :focus-visible {
+    background-color: #68a2ca;
+    outline: 1px solid #82b3d3;
+    border-radius: 4px;
+  }
+
+  :focus {
+    background-color: #68a2ca;
+    outline: 1px solid #82b3d3;
+    border-radius: 4px;
+  }
+
+  :active {
+    background-color: #82b3d3;
+    color: rgba(255, 255, 255, 0.3);
+  }
+
 }
 
 .pagination-item.pagination-current {
   color: #000000;
   background-color: #f2f2f2;
+
+
+  :hover {
+    color: #000000;
+    background-color: #f2f2f2;
+    outline: 1px solid #f2f2f2;
+  }
+
+  :focus-visible {
+    color: #000000;
+    background-color: #f2f2f2;
+    outline: 1px solid #f2f2f2;
+  }
+
+  :focus {
+    color: #000000;
+    background-color: #f2f2f2;
+    outline: 1px solid #f2f2f2;
+  }
+
+  :active {
+    color: #000000;
+    background-color: #f2f2f2;
+    outline: 1px solid #f2f2f2;
+  }
 }
 
 .pagination-item.pagination-dotted {
   color: #000000;
   background: none;
+
+  :hover {
+    color: #000000;
+    background: none;
+    outline: 1px solid #82b3d3;
+  }
+
+  :focus-visible {
+    color: #000000;
+    background: none;
+    outline: 1px solid #82b3d3;
+  }
+
+  :focus {
+    color: #000000;
+    background: none;
+    outline: 1px solid #82b3d3;
+  }
+
+  :active {
+    color: #000000;
+    background: none;
+    outline: 1px solid #82b3d3;
+  }
 }
 
 .pagination-dotted .pagination-link {
