@@ -143,11 +143,27 @@ ul.navigation-user {
   padding: 0;
 }
 
+
 .header-navigation {
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
   flex-wrap: wrap;
+  z-index: 1;
+}
+
+.current {
+  position: relative;
+}
+
+.current::after {
+  position: absolute;
+  content: "";
+  right: 16px;
+  left: 16px;
+  bottom: -2px;
+  height: 2px;
+  background-color: #756157;
 }
 
 .navigation-list {
@@ -279,7 +295,7 @@ ul.navigation-user {
 
 .reasons {
   text-align: center;
-  padding: 69px 274px 90px;
+  padding: 69px 274px 89px;
 }
 
 .reasons-title {
@@ -417,7 +433,7 @@ ul.navigation-user {
 .slogan-text {
   font-size: 22px;
   line-height: 28px;
-  margin: 20px auto 0;
+  margin: 18px auto 0;
 }
 
 /* ADVICE */
@@ -452,17 +468,26 @@ ul.navigation-user {
   text-transform: uppercase;
   color: #000000;
   margin: 0 auto;
+  text-align: center;
 }
 
-.advice-item-title-house::before {
+.card-icon::before {
+  display: block;
+  content: "";
+  margin: 0 auto 30px;
+  width: 72px;
+  height: 72px;
+}
+
+.house-icon::before {
   background: url("../images/icons/house.svg") no-repeat center / cover;
 }
 
-.advice-item-title-food::before {
+.food-icon::before {
   background: url("../images/icons/food.svg") no-repeat center / cover;
 }
 
-.advice-item-title-souvenirs::before {
+.souvenirs-icon::before {
   background: url("../images/icons/souvenirs.svg") no-repeat center / cover;
 }
 
@@ -489,7 +514,7 @@ ul.navigation-user {
 .interested-text {
   font-size: 22px;
   line-height: 28px;
-  margin: 20px auto 54px;
+  margin: 18px auto 51px;
   text-align: center;
 }
 
@@ -511,23 +536,28 @@ ul.navigation-user {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 414px;
+
 
 }
 
 .subscribe-title {
   color: #ffffff;
-  margin: 0 auto;
+  margin: 96px auto 0;
 }
 
 .subscribe-text {
-  margin: 20px auto 54px;
+  padding: 0 366px;
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 54px;
+  text-align: center;
 }
 
 .subscribe-form {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 104px;
 }
 
 .subscribe-email {
@@ -574,11 +604,7 @@ ul.navigation-user {
   align-items: center;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding: 40px 70px 30px;
-
-
-
-  /* height: 70px; */
+  padding: 26px 70px 30px;
 }
 
 .footer-social-list {
@@ -690,8 +716,28 @@ address .contact-link {
 .breadcrumbs {
   display: flex;
   justify-content: start;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0 0 40px 70px;
+}
+
+.breadcrumbs-item {
+  position: relative;
+  margin-right: 28px;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  position: absolute;
+  top: 15px;
+  right: -29px;
+  transform: translateY(-50%);
+  background-image: url("../images/icons/breadcrumbs-icon.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 21px;
+  content: "";
 }
 
 .catalog-filters {
@@ -813,6 +859,7 @@ address .contact-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 50px;
 }
 
 .hotels-found {
@@ -820,6 +867,7 @@ address .contact-link {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .hotels-control {
