@@ -197,11 +197,6 @@ ul.navigation-user {
   flex-wrap: wrap;
 }
 
-/* .navigation-user .navigation-item:not(:last-child) {
-  min-height: 64px;
-
-} */
-
 .navigation-user.list {
   margin-right: 70px;
 }
@@ -228,16 +223,27 @@ ul.navigation-user {
   color: #000000;
 }
 
-.navigation-icon:hover {
-  color: #756157;
+.navigation-user-item:nth-child(1) .navigation-user-link,
+.navigation-user-item:nth-child(2) .navigation-user-link {
+  display: block;
+  width: 44px;
+  height: 64px;
+  /* background-color: #000000; */
+
 }
 
-.navigation-icon:focus-visible {
-  outline: 1px solid #83b3d3;;
+.search-icon {
+  background-image: url("../images/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
 }
 
-.navigation-icon:active {
-  color: rgba(117, 61, 57, 0.3);
+.heart-icon {
+  background-image: url("../images/icons/heart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
 }
 
 .navigation-user-link.button {
@@ -254,7 +260,7 @@ ul.navigation-user {
 .like-number {
   position: absolute;
   right: 5px;
-  bottom: 0;
+  bottom: 32px;
   z-index: 1;
   border-radius: 50%;
   background-color: #7db54f;
@@ -480,15 +486,15 @@ ul.navigation-user {
 }
 
 .house-icon::before {
-  background: url("../images/icons/house.svg") no-repeat center / cover;
+  background: url("../images/icons/house.svg") no-repeat center / contain;
 }
 
 .food-icon::before {
-  background: url("../images/icons/food.svg") no-repeat center / cover;
+  background: url("../images/icons/food.svg") no-repeat center / contain;
 }
 
 .souvenirs-icon::before {
-  background: url("../images/icons/souvenirs.svg") no-repeat center / cover;
+  background: url("../images/icons/souvenirs.svg") no-repeat center / contain;
 }
 
 .advice-item-text {
@@ -775,6 +781,7 @@ address .contact-link {
 .infrastructure-item {
   line-height: 23px;
   margin-bottom: 16px;
+  margin-left: 10px;
 }
 
 .housing-type-list.list {
@@ -784,40 +791,123 @@ address .contact-link {
 
 .filter-group.housing-type {
   /* отступ на макете 140px+9,57px от слова Апартаменты */
-  margin-right: 150px;
+  margin-right: 151px;
 }
 
 .housing-type-item {
   line-height: 23px;
   margin-bottom: 16px;
+  margin-left: 10px;
 }
 
 .filter-group.cost-rane-group {
-  /* отступ на макете 70px */
-  /* margin-left: 70px; */
+  position: relative;
 }
 
 .start-cost,
 .end-cost {
+
   background-color: #f2f2f2;
   color: #000000;
-  width: 143px;
-  height: 48px;
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
   font-family: inherit;
+
+  padding: 10px 40px 10px 20px;
+  width: 143px;
+  min-height: 48px;
 }
 
-.cost-range-start span,
-.cost-range-end span {
-  opacity: 0.3;
+.start-cost {
+  border-radius: 4px 0 0 4px;
+  border: none;
 }
+
+.end-cost {
+  border-radius: 0 4px 4px 0;
+  border: none;
+}
+
+
+.cost-range-start,
+.cost-range-end {
+  position: relative;
+}
+
+.range-placeholder {
+  position: absolute;
+  color: #000000;
+  right: 0;
+  top: 12px;
+  opacity: 0.3;
+  transform: translateY(-50%);
+  padding: 0 20px;
+  z-index: 1;
+}
+
+/* Здесь бегунки для цен */
+
+.price-bar-control {
+  position: relative;
+  width: 287px;
+  height: 20px;
+}
+
+.price-bar-control::before,
+.price-bar-control::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffff;
+  height: 4px;
+  content: "";
+}
+
+.price-bar-control::before {
+  top: 46px;
+  background-color: #ffffff;
+  width: 227px;
+}
+
+.price-bar-control::after {
+  right: 0;
+  top: 46px;
+  width: 65px;
+  background-color: rgba(255,255,255,0.3);
+}
+
+.price-scale-toggle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #ffffff;
+  width: 20px;
+  height: 20px;
+}
+
+.price-scale-min-control {
+  left: 0;
+  top: 36px;
+}
+
+.price-scale-max-control {
+  left: 208px;
+  top: 36px;
+}
+
+
+
+/* Кнопки фильтра ПРИМЕНИТЬ СБРОСИТЬ */
 
 .filter-buttons {
   display: flex;
   flex-direction: column;
   margin-top: 56px;
+  margin-left: 68px;
   gap: 32px;
 }
 
@@ -858,9 +948,9 @@ address .contact-link {
 
 .hotels-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
-  margin: 50px;
+  margin: 50px 0;
 }
 
 .hotels-found {
@@ -868,7 +958,7 @@ address .contact-link {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 0;
+  margin: 0 200px 0 0;
 }
 
 .hotels-control {
@@ -880,7 +970,24 @@ address .contact-link {
   line-height: 21px;
   color: #333333;
   font-family: inherit;
-  padding-left: 12px;
+  padding-left: 18px;
+  margin-right: 70px;
+  appearance: none;
+  position: relative;
+}
+
+.hotels-control::after {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  transform: translateY(-50%);
+  background-image: url("../images/icons/select.svg");
+  background-repeat: no-repeat;
+  background-color: #000000;
+  background-size: contain;
+  width: 120px;
+  height: 90px;
+  content: "";
 }
 
 .hotels-control option {
@@ -1019,7 +1126,7 @@ address .contact-link {
 }
 
 .pagination-link {
-  display: block;
+  /* display: block; */
   width: 60px;
   height: 60px;
   display: flex;
