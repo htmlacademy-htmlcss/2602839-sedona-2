@@ -764,13 +764,35 @@ address .contact-link {
   line-height: 24px;
   font-weight: 700;
   text-transform: capitalize;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   padding: 0;
 }
 
 .infrastructure-list.list {
   padding: 0;
   margin: 0;
+}
+
+.custom-checkbox,
+.custom-radio {
+  appearance: none;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: none;
+}
+
+.custom-checkbox {
+  border-radius: 4px;
+  left: -7px;
+  top: 7px;
+}
+
+.custom-radio {
+  border-radius: 50%;
+  left: -7px;
+  top: 5px;
 }
 
 .filter-group.infrastructure {
@@ -780,8 +802,28 @@ address .contact-link {
 
 .infrastructure-item {
   line-height: 23px;
-  margin-bottom: 16px;
-  margin-left: 10px;
+  margin-bottom: 8px;
+  margin-left: 4px;
+  position: relative;
+}
+
+.custom-checkbox:checked {
+  background-image: url("../images/icons/checked-icon.svg");
+  background-position: center;
+  background-size: 13px 11px;
+  background-repeat: no-repeat;
+}
+
+.custom-radio:checked::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #3F5E72;
+  width: 10px;
+  height: 10px;
+  content: "";
 }
 
 .housing-type-list.list {
@@ -791,17 +833,21 @@ address .contact-link {
 
 .filter-group.housing-type {
   /* отступ на макете 140px+9,57px от слова Апартаменты */
-  margin-right: 151px;
+  margin-right: 150px;
 }
 
 .housing-type-item {
   line-height: 23px;
-  margin-bottom: 16px;
-  margin-left: 10px;
+  margin-bottom: 12px;
+  margin-left: 3px;
 }
 
-.filter-group.cost-rane-group {
+.filter-group.cost-range-group {
   position: relative;
+}
+
+.cost-rane-group .filter-group-title {
+  margin-bottom: 32px;
 }
 
 .start-cost,
@@ -943,14 +989,15 @@ address .contact-link {
   display: flex;
   flex-direction: column;
   margin: 0 70px;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .hotels-wrapper {
   display: flex;
   justify-content: start;
   align-items: center;
-  margin: 50px 0;
+  margin: 49px 0 39px 0;
 }
 
 .hotels-found {
@@ -994,13 +1041,46 @@ address .contact-link {
   padding-left: 20px;
 }
 
+.hotels-sort-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .hotels-sort-link {
+  display: inline-block;
   width: 48px;
   height: 48px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
-  background: none;
+  padding: 17px 16px;
 }
+
+.hotels-sort-link::after {
+  display: block;
+  margin: 0 auto;
+  width: 17px;
+  height: 14px;
+  content: "";
+}
+
+.hotels-sort-grid::after {
+  background: url("../images/icons/grid-icon.svg") no-repeat center/cover;
+}
+
+.hotels-sort-cards::after {
+  background: url("../images/icons/cards-icon.svg") no-repeat center/cover;
+
+}
+
+.hotels-sort-table::after {
+  background: url("../images/icons/table-icon.svg") no-repeat center/cover;
+
+}
+
 
 .hotels-sort-selected {
   border: 2px solid #000000;
@@ -1114,19 +1194,20 @@ address .contact-link {
 /* PAGINATION catalog */
 
 .pagination {
-  padding: 40px 70px 60px;
+  padding: 39px 70px 60px;
 }
+
+
 
 .pagination-list {
   display: flex;
   justify-content: start;
   padding: 0;
   margin: 0;
-  gap: 10px;
+  gap: 8px;
 }
 
 .pagination-link {
-  /* display: block; */
   width: 60px;
   height: 60px;
   display: flex;
