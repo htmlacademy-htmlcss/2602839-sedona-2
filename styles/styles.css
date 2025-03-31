@@ -1167,7 +1167,20 @@ address .contact-link {
   background-color: #7db54f;
   font-family: inherit;
   padding: 8px 18px;
+}
 
+.star-raiting {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 6px;
+}
+
+.star-icon {
+  background-image: url("../images/icons/star-icon.svg");
+  background-position: left top;
+  width: 18px;
+  height: 17px;
 }
 
 .hotels-item-raitings {
