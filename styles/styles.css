@@ -95,12 +95,6 @@ body {
     border-radius: 4px;
   }
 
-  :focus {
-    background-color: #615048;
-    outline: 1px solid #615048;
-    border-radius: 4px;
-  }
-
   :active {
     background-color: #756157;
     color: rgba(255, 255, 255, 0.3);
@@ -263,8 +257,6 @@ ul.navigation-user {
   margin-left: 20px;
 }
 
-.navigation-user-link.button:hover,
-.navigation-user-link.button:focus,
 .navigation-user-link.button:focus-visible {
   background-color: #615048;
   color: #ffffff;
@@ -559,7 +551,6 @@ ul.navigation-user {
 }
 
 .interested-link.button:hover,
-.interested-link.button:focus,
 .interested-link.button:focus-visible {
   background-color: #615048;
   color: #ffffff;
@@ -645,7 +636,6 @@ ul.navigation-user {
 }
 
 .subscribe-button:hover,
-.subscribe-button:focus,
 .subscribe-button:focus-visible {
   background-color: #68a2ca;
   color:#ffffff;
@@ -696,10 +686,6 @@ ul.navigation-user {
     color: #68a2ca;
   }
 
-  :focus {
-    color: #68a2ca;
-  }
-
   :active {
     color: rgba(104, 162, 202, 0.3);
   }
@@ -730,10 +716,6 @@ address .contact-link {
     color: #756157;
   }
 
-  :focus {
-    color: #756157;
-  }
-
   :active {
     color: rgba(117, 97, 87, 0.3);
   }
@@ -749,10 +731,6 @@ address .contact-link {
   }
 
   :focus-visible {
-    color: #756157;
-  }
-
-  :focus {
     color: #756157;
   }
 
@@ -884,9 +862,8 @@ address .contact-link {
   opacity: 0.6;
 }
 
-.custom-checkbox:checked:focus,
+
 .custom-checkbox:checked:focus-visible,
-.custom-checkbox:focus,
 .custom-checkbox:focus-visible {
   outline: 3px solid #83b3d3;
 }
@@ -919,9 +896,8 @@ address .contact-link {
   opacity: 0.6;
 }
 
-.custom-radio:checked:focus,
+
 .custom-radio:checked:focus-visible,
-.custom-radio:focus,
 .custom-radio:focus-visible {
   outline: 3px solid #83b3d3;
 }
@@ -986,10 +962,8 @@ address .contact-link {
   border: none;
 }
 
-.start-cost:focus,
 .start-cost:focus-visible,
-.end-cost:focus,
-.end-cost:focus {
+.end-cost:focus-visible {
   outline: 3px solid #83b3d3;;
 }
 
@@ -1053,7 +1027,6 @@ address .contact-link {
   height: 20px;
 }
 
-.price-scale-toggle:focus,
 .price-scale-toggle:focus-visible {
   outline: 3px solid #83b3d3;
 }
@@ -1110,7 +1083,6 @@ address .contact-link {
 }
 
 .filter-buttons-accept:hover,
-.filter-buttons-accept:focus,
 .filter-buttons-accept:focus-visible {
   background-color: #68a2ca;
   color:#ffffff;
@@ -1135,7 +1107,6 @@ address .contact-link {
   opacity: 0.6;
 }
 
-.filter-buttons-cancel:focus,
 .filter-buttons-cancel:focus-visible {
   outline: 3px solid #83b3d3;
 }
@@ -1195,7 +1166,6 @@ address .contact-link {
 }
 
 .hotels-control:hover,
-.hotels-control:focus,
 .hotels-control:focus-visible {
   border-color: #68a2ca;
 }
@@ -1318,7 +1288,6 @@ address .contact-link {
   background-color: #615048;
 }
 
-.hotels-item-detail:focus,
 .hotels-item-detail:focus-visible {
   background-color: #615048;
 }
@@ -1351,7 +1320,6 @@ address .contact-link {
   background-color: #68a2ca;
 }
 
-.hotels-item-favorites-button:focus,
 .hotels-item-favorites-button:focus-visible {
   background-color: #68a2ca;
 }
@@ -1377,7 +1345,6 @@ address .contact-link {
   background-color: #6c9e42;
 }
 
-.hotels-item-favorites-button:focus.favorite-checked,
 .hotels-item-favorites-button:focus-visible.favorite-checked {
   background-color: #6c9e42;
 }
@@ -1474,12 +1441,6 @@ address .contact-link {
     border-radius: 4px;
   }
 
-  :focus {
-    background-color: #68a2ca;
-    outline: 1px solid #82b3d3;
-    border-radius: 4px;
-  }
-
   :active {
     background-color: #82b3d3;
     color: rgba(255, 255, 255, 0.3);
@@ -1504,11 +1465,6 @@ address .contact-link {
     outline: 1px solid #f2f2f2;
   }
 
-  :focus {
-    color: #000000;
-    background-color: #f2f2f2;
-    outline: 1px solid #f2f2f2;
-  }
 
   :active {
     color: #000000;
@@ -1528,12 +1484,6 @@ address .contact-link {
   }
 
   :focus-visible {
-    color: #000000;
-    background: none;
-    outline: 1px solid #82b3d3;
-  }
-
-  :focus {
     color: #000000;
     background: none;
     outline: 1px solid #82b3d3;
