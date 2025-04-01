@@ -183,6 +183,14 @@ ul.navigation-user {
   align-items: center;
 }
 
+.navigation-list-item:hover {
+  color: #756157;
+}
+
+.navigation-list-item:active {
+  opacity: 0.3;
+}
+
 .navigation-list-link {
   display: block;
   color: inherit;
@@ -228,8 +236,6 @@ ul.navigation-user {
   display: block;
   width: 44px;
   height: 64px;
-  /* background-color: #000000; */
-
 }
 
 .search-icon {
@@ -255,6 +261,23 @@ ul.navigation-user {
   padding: 8px 34px;
   color: #ffffff;
   margin-left: 20px;
+}
+
+.navigation-user-link.button:hover,
+.navigation-user-link.button:focus,
+.navigation-user-link.button:focus-visible {
+  background-color: #615048;
+  color: #ffffff;
+}
+
+.navigation-user-link.button:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.navigation-user-link.button:disabled {
+  background-color: #e5e5e5;
+  color: #ffffff;
 }
 
 .like-number {
@@ -346,6 +369,7 @@ ul.navigation-user {
   width: 400px;
   height: 100%;
 }
+
 .advantages-item img {
   height: 100%;
 }
@@ -534,6 +558,23 @@ ul.navigation-user {
   border-radius: 4px;
 }
 
+.interested-link.button:hover,
+.interested-link.button:focus,
+.interested-link.button:focus-visible {
+  background-color: #615048;
+  color: #ffffff;
+}
+
+.interested-link.button:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.interested-link.button:disabled {
+  background-color: #e5e5e5;
+  color: #ffffff;
+}
+
 /* SUBSCRIBE */
 
 .subscribe {
@@ -601,6 +642,23 @@ ul.navigation-user {
   cursor: pointer;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus,
+.subscribe-button:focus-visible {
+  background-color: #68a2ca;
+  color:#ffffff;
+}
+
+.subscribe-button:active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.subscribe-button:disabled {
+  background-color: #e5e5e5;
+  color:#ffffff;
 }
 
 /* FOOTER сайта */
@@ -781,6 +839,7 @@ address .contact-link {
   height: 20px;
   background: #ffffff;
   border: none;
+  cursor: pointer;
 }
 
 .custom-checkbox {
@@ -807,12 +866,39 @@ address .contact-link {
   position: relative;
 }
 
+.infrastructure-item label {
+  cursor: pointer;
+}
+
 .custom-checkbox:checked {
   background-image: url("../images/icons/checked-icon.svg");
   background-position: center;
   background-size: 13px 11px;
   background-repeat: no-repeat;
 }
+
+.infrastructure-item input:checked:hover,
+.infrastructure-item label:hover,
+.infrastructure-item input:hover,
+.infrastructure-item label:checked:hover {
+  opacity: 0.6;
+}
+
+.custom-checkbox:checked:focus,
+.custom-checkbox:checked:focus-visible,
+.custom-checkbox:focus,
+.custom-checkbox:focus-visible {
+  outline: 3px solid #83b3d3;
+}
+
+.infrastructure-item input:checked:active,
+.infrastructure-item label:active,
+.infrastructure-item input:active,
+.infrastructure-item label:checked:active {
+  opacity: 0.3;
+}
+
+
 
 .custom-radio:checked::before {
   position: absolute;
@@ -824,6 +910,27 @@ address .contact-link {
   width: 10px;
   height: 10px;
   content: "";
+}
+
+.housing-type-item input:checked:hover,
+.housing-type-item label:hover,
+.housing-type-item input:hover,
+.housing-type-item label:checked:hover {
+  opacity: 0.6;
+}
+
+.custom-radio:checked:focus,
+.custom-radio:checked:focus-visible,
+.custom-radio:focus,
+.custom-radio:focus-visible {
+  outline: 3px solid #83b3d3;
+}
+
+.housing-type-item input:checked:active,
+.housing-type-item label:active,
+.housing-type-item input:active,
+.housing-type-item label:checked:active {
+  opacity: 0.3;
 }
 
 .housing-type-list.list {
@@ -840,6 +947,10 @@ address .contact-link {
   line-height: 23px;
   margin-bottom: 12px;
   margin-left: 3px;
+}
+
+.housing-type-item label {
+  cursor: pointer;
 }
 
 .filter-group.cost-range-group {
@@ -873,6 +984,13 @@ address .contact-link {
 .end-cost {
   border-radius: 0 4px 4px 0;
   border: none;
+}
+
+.start-cost:focus,
+.start-cost:focus-visible,
+.end-cost:focus,
+.end-cost:focus {
+  outline: 3px solid #83b3d3;;
 }
 
 
@@ -920,7 +1038,7 @@ address .contact-link {
   right: 0;
   top: 46px;
   width: 65px;
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .price-scale-toggle {
@@ -935,10 +1053,23 @@ address .contact-link {
   height: 20px;
 }
 
+.price-scale-toggle:focus,
+.price-scale-toggle:focus-visible {
+  outline: 3px solid #83b3d3;
+}
+
+.price-scale-toggle:active {
+  outline: 2px solid #83b3d3;
+}
+
+
+
 .price-scale-min-control {
   left: 0;
   top: 36px;
 }
+
+
 
 .price-scale-max-control {
   left: 208px;
@@ -978,9 +1109,43 @@ address .contact-link {
   border-radius: 4px;
 }
 
+.filter-buttons-accept:hover,
+.filter-buttons-accept:focus,
+.filter-buttons-accept:focus-visible {
+  background-color: #68a2ca;
+  color:#ffffff;
+}
+
+.filter-buttons-accept:active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.filter-buttons-accept:disabled {
+  background-color: #e5e5e5;
+  color:#ffffff;
+}
+
 .filter-buttons-cancel {
   background: none;
   border-radius: 4px;
+}
+
+.filter-buttons-cancel:hover {
+  opacity: 0.6;
+}
+
+.filter-buttons-cancel:focus,
+.filter-buttons-cancel:focus-visible {
+  outline: 3px solid #83b3d3;
+}
+
+.filter-buttons-cancel:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.filter-buttons-cancel:disabled {
+  color: rgba(255, 255, 255, 0.1);
 }
 
 /* HOTELS catalog */
@@ -1009,9 +1174,15 @@ address .contact-link {
 }
 
 .hotels-control {
+  position: relative;
   width: 292px;
   height: 49px;
   border: 2px solid #e5e5e5;
+  background-color: #ffffff;
+  background-image: url("../images/icons/select.svg");
+  background-repeat: no-repeat;
+  background-size: 12px 9px;
+  background-position: center right 20px;
   border-radius: 4px;
   font-size: 18px;
   line-height: 21px;
@@ -1020,21 +1191,18 @@ address .contact-link {
   padding-left: 18px;
   margin-right: 70px;
   appearance: none;
-  position: relative;
+  cursor: pointer;
 }
 
-.hotels-control::after {
-  position: absolute;
-  top: 1px;
-  right: 1px;
-  transform: translateY(-50%);
-  background-image: url("../images/icons/select.svg");
-  background-repeat: no-repeat;
-  background-color: #000000;
-  background-size: contain;
-  width: 120px;
-  height: 90px;
-  content: "";
+.hotels-control:hover,
+.hotels-control:focus,
+.hotels-control:focus-visible {
+  border-color: #68a2ca;
+}
+
+.hotels-control:disabled {
+  opacity: 0.3;
+  border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .hotels-control option {
@@ -1144,11 +1312,27 @@ address .contact-link {
   text-transform: uppercase;
   padding: 8px 26px;
   border-radius: 4px;
+}
 
+.hotels-item-detail:hover {
+  background-color: #615048;
+}
+
+.hotels-item-detail:focus,
+.hotels-item-detail:focus-visible {
+  background-color: #615048;
+}
+
+.hotels-item-detail:active {
+  background-color: #756157;
+  opacity: 0.3;
+}
+
+.hotels-item-detail:disabled {
+  background-color: #e5e5e5;
 }
 
 .hotels-item-favorites-button {
-
   display: inline-block;
   color: #ffffff;
   font-size: 16px;
@@ -1163,11 +1347,51 @@ address .contact-link {
   cursor: pointer;
 }
 
+.hotels-item-favorites-button:hover {
+  background-color: #68a2ca;
+}
+
+.hotels-item-favorites-button:focus,
+.hotels-item-favorites-button:focus-visible {
+  background-color: #68a2ca;
+}
+
+.hotels-item-favorites-button:active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.hotels-item-favorites-button:disabled {
+  background-color: #e5e5e5;
+}
+
+
+
 .hotels-item-favorites-button.favorite-checked {
   background-color: #7db54f;
   font-family: inherit;
   padding: 8px 18px;
 }
+
+.hotels-item-favorites-button:hover.favorite-checked {
+  background-color: #6c9e42;
+}
+
+.hotels-item-favorites-button:focus.favorite-checked,
+.hotels-item-favorites-button:focus-visible.favorite-checked {
+  background-color: #6c9e42;
+}
+
+.hotels-item-favorites-button:active.favorite-checked {
+  background-color: #6c9e42;
+  color: rgba(255, 255, 255, 0.3);
+
+}
+
+.hotels-item-favorites-button:disabled.favorite-checked {
+  background-color: #e5e5e5;
+}
+
 
 .star-raiting {
   display: flex;
