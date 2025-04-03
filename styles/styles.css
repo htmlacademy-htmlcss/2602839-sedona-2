@@ -60,6 +60,7 @@ body {
   background-color: #ffffff;
   width: 1200px;
   margin: 0 auto;
+  box-shadow: 0 0 15px 0 yrgba(0, 0, 0, 0.2);
 }
 
 .interested-link,
@@ -257,12 +258,13 @@ ul.navigation-user {
   margin-left: 20px;
 }
 
-.navigation-user-link.button:focus-visible {
+.navigation-user-link:hover,
+.navigation-user-link:focus-visible {
   background-color: #615048;
   color: #ffffff;
 }
 
-.navigation-user-link.button:active {
+.navigation-user-link:active {
   background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
 }
@@ -856,8 +858,8 @@ address .contact-link {
 }
 
 .infrastructure-item input:checked:hover,
-.infrastructure-item label:hover,
 .infrastructure-item input:hover,
+.infrastructure-item label:hover,
 .infrastructure-item label:checked:hover {
   opacity: 0.6;
 }
