@@ -266,7 +266,96 @@
           </a>
         </div>
       </footer>
-    </div>
+
+      <!-- Модальное окно -->
+
+      <div class="modal-container">   <!--  modal-container-show -->
+        <div class="modal">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <button class="modal-close-button" type="button">
+            <span class="visually-hidden">Закрыть.</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="14" fill="none" aria-hidden="true"
+              viewBox="0 0 15 14" role="img" focusable="false">
+              <path fill="currentcolor"
+                d="M14.4 1.3 13 0 7.4 5.7 1.7 0 .4 1.3 6 7 .4 12.7 1.7 14l5.7-5.7L13 14l1.3-1.3L8.7 7l5.7-5.7Z" />
+            </svg>
+          </button>
+          <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="form-container">
+              <label class="modal-input-label modal-input-label-title" for="arrival-date">Дата
+                заезда:</label>
+              <div class="modal-input-container">
+                <input class="form-input input-element modal-input-long" name="arrival-date" type="text"
+                  value="27 апреля 2020" id="arrival-date" placeholder="Укажите дату" required>
+                <button class="calendar-button" type="button">
+                  <span class="visually-hidden">Выбрать дату заезда в календаре.</span>
+                </button>
+                <p class="message message-error">Мы не можем отправить вас в прошлое.</p>
+              </div>
+            </div>
+            <div class="form-container">
+              <label class="modal-input-label modal-input-label-title" for="departure-date">Дата
+                выезда:</label>
+              <div class="modal-input-container">
+                <input class="form-input input-element modal-input-long" name="departure-date" type="text"
+                  value="1 сентября 2023" id="departure-date" placeholder="Укажите дату" required>
+                <button class="calendar-button" type="button">
+                  <span class="visually-hidden">Выбрать дату выезда в календаре</span>
+                </button>
+                <p class="message">На эти даты есть свободные номера. Пока есть.</p>
+              </div>
+            </div>
+            <div class="form-container">
+              <div class="guests-container">
+                <label class="modal-input-label modal-input-label-title adult-guest"
+                  for="adult-guest">Взрослые:</label>
+                <div class="form-input-guest-container">
+                  <button class="plus-minus-button minus-button" type="button">
+                    <span class="visually-hidden">Увеличить количество взрослых</span>
+                  </button>
+                  <input class="form-input input-element form-input-guest" name="adult-guest" type="number" value="2"
+                    max="99" id="adult-guest" min="1" required>
+                  <button class="plus-minus-button plus-button" type="button">
+                    <span class="visually-hidden">Уменьшить количество взрослых</span>
+                  </button>
+                </div>
+              </div>
+              <div class="guests-container">
+                <label class="modal-input-label modal-input-label-content children-guest"
+                  for="children-guest">Дети:</label>
+                <div class="tooltip-input">
+                  <div class="tooltip">
+                    <button class="tooltip-toggle" type="button">
+                      <span class="visually-hidden">Подробная информация.</span>
+                      <svg class="info-icon" width="2" height="12" viewBox="0 0 2 12" fill="none" role="img"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H2V2H0V0ZM2 12H0V3H2V12Z"></path>
+                      </svg>
+                    </button>
+                    <p class="tooltip-text" role="tooltip">
+                      Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                    </p>
+                  </div>
+                  <div class="form-input-guest-container">
+                    <button class="plus-minus-button minus-button" type="button">
+                      <span class="visually-hidden">Увеличить количество детей.</span>
+                    </button>
+                    <input class="form-input input-element form-input-guest" name="children-guest" type="number"
+                      value="2" max="99" id="children-guest" min="0" required>
+                    <button class="plus-minus-button plus-button" type="button">
+                      <span class="visually-hidden">Уменьшить количество детей.</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="button button-modal" type="submit">Найти</button>
+          </form>
+        </div>
+      </div>
+
+
+    </div><!--  Закрыли page-container  -->
 
 
 

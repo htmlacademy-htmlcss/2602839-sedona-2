@@ -1523,3 +1523,328 @@ address .contact-link {
 .subscribe-catalog .subscribe-text {
   color: #333333;
 }
+
+/* Модальное окно */
+
+.modal-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(242, 242, 242, 0.8);
+  width: 100%;
+  height: 100%;
+}
+
+.modal-container-show {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  box-sizing: border-box;
+  margin: auto;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  background-color: #ffffff;
+  padding: 64px 70px;
+  width: 715px;
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 64px;
+  padding-right: 60px;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-close-button {
+  display: flex;
+  position: absolute;
+  top: 64px;
+  right: 52px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  padding: 0;
+  width: 53px;
+  height: 53px;
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus-visible {
+  outline: 3px solid #83b3d3;
+}
+
+.modal-close-button:focus {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:active {
+  background-color: #e6e6e6;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 46px;
+}
+
+
+.form-container:has(.message) {
+  margin-bottom: 23px;
+}
+
+.modal-input-label {
+  margin: 12px 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.modal-input-label-title {
+  width: 138px;
+}
+
+.modal-input-label-content {
+  max-width: 98px;
+}
+
+.modal-input-container {
+  position: relative;
+  flex: 1;
+}
+
+.modal-input-long {
+  border-radius: 4px;
+  padding: 12px 16px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.calendar-button {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  opacity: 0.3;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-image: url("../images/icons/calendar-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.calendar-button:hover {
+  opacity: 1;
+}
+
+.calendar-button:focus-visible {
+  outline: 3px solid #83b3d3;
+}
+
+.calendar-button:focus {
+  opacity: 1;
+  border-radius: 4px;
+}
+
+.calendar-button:active {
+  opacity: 0.2;
+}
+
+.message {
+  margin: 0;
+  margin-left: 18px;
+  font-size: 16px;
+}
+
+.message-error {
+  color: #ff5757;
+}
+
+.guests-container {
+  display: flex;
+  align-items: center;
+}
+
+.children-guest {
+  margin: 10px;
+}
+
+.form-input {
+  border: none;
+}
+
+.form-input:disabled {
+  opacity: 30%;
+}
+
+.input-element {
+  border-radius: 4px;
+  background-color: #f2f2f2;
+}
+
+.form-input-guest-container {
+  display: flex;
+  position: relative;
+}
+
+.form-input-guest {
+  box-sizing: border-box;
+  padding: 14px 38px;
+  max-width: 114px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.form-input-guest::-webkit-inner-spin-button,
+.form-input-guest::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+
+.plus-minus-button {
+  position: absolute;
+  top: 14px;
+  align-items: center;
+  opacity: 0.3;
+  z-index: 1;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  width: 25px;
+  height: 25px;
+}
+
+.plus-button {
+  right: 10px;
+  background-image: url("../images/icons/plus-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.minus-button {
+  left: 10px;
+  background-image: url("../images/icons/minus-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.plus-minus-button:hover {
+  opacity: 1;
+}
+
+.plus-minus-button:focus-visible {
+  outline: 3px solid #83b3d3;
+}
+
+.plus-minus-button:focus {
+  opacity: 1;
+  border-radius: 4px;
+}
+
+.plus-minus-button:active {
+  opacity: 0.2;
+}
+
+.tooltip-input {
+  display: flex;
+  position: relative;
+}
+
+.tooltip {
+  position: relative;
+  margin-top: 11px;
+}
+
+.tooltip-toggle {
+  display: block;
+  position: relative;
+  margin-right: 42px;
+  border: none;
+  border-radius: 50%;
+  background-color: #83b3d3;
+  width: 26px;
+  height: 26px;
+}
+
+.info-icon {
+  fill: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.tooltip-text {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 13px;
+  transform: translateX(-50%);
+  z-index: 1;
+  box-sizing: border-box;
+  margin: 0;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #333333;
+  padding: 21px 18px 23px 22px;
+  width: 256px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text::after {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: url("../images/icons/popup-triangle-icon.svg");
+  width: 19px;
+  height: 9px;
+  content: "";
+}
+
+.modal-form .button {
+  border-width: 0;
+  padding: 18px 77px;
+  border-radius: 10px;
+  background-color: #83b3d3;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
