@@ -802,7 +802,7 @@ address .contact-link {
   line-height: 24px;
   font-weight: 700;
   text-transform: capitalize;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   padding: 0;
 }
 
@@ -841,45 +841,77 @@ address .contact-link {
 
 .infrastructure-item {
   line-height: 23px;
-  margin-bottom: 8px;
-  margin-left: 4px;
+  margin-bottom: 16px;
+  margin-left: -2px;
   position: relative;
 }
 
-.infrastructure-item label {
+
+.infrastructure-item span {
   cursor: pointer;
 }
 
-.custom-checkbox:checked {
+.infrastructure-item .control-label {
+  display: inline-block;
+  margin-left: 14px;
+}
+
+.housing-type-item {
+  line-height: 23px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.housing-type-item .control-label {
+  display: inline-block;
+  margin-left: 14px;
+}
+
+.control {
+  position: relative;
+  display: block;
+}
+
+/* Mark */
+.control-mark {
+  position: absolute;
+  top: 2px;
+  left: 1px;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.radio-mark {
+  border-radius: 50%;
+}
+
+.housing-type-list.list {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.filter-group.housing-type {
+  /* отступ на макете 140px+9,57px от слова Апартаменты */
+  margin-right: 148px;
+}
+
+.housing-type-item label {
+  cursor: pointer;
+}
+
+.custom-checkbox[type="checkbox"]:checked + .control-mark {
+  position: absolute;
   background-image: url("../images/icons/checked-icon.svg");
   background-position: center;
   background-size: 13px 11px;
   background-repeat: no-repeat;
+  content: "";
 }
-
-.infrastructure-item input:checked:hover,
-.infrastructure-item input:hover,
-.infrastructure-item label:hover,
-.infrastructure-item label:checked:hover {
-  opacity: 0.6;
-}
-
-
-.custom-checkbox:checked:focus-visible,
-.custom-checkbox:focus-visible {
-  outline: 3px solid #83b3d3;
-}
-
-.infrastructure-item input:checked:active,
-.infrastructure-item label:active,
-.infrastructure-item input:active,
-.infrastructure-item label:checked:active {
-  opacity: 0.3;
-}
-
-
-
-.custom-radio:checked::before {
+.custom-radio[type="radio"]:checked + .control-mark::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -891,52 +923,28 @@ address .contact-link {
   content: "";
 }
 
-.housing-type-item input:checked:hover,
-.housing-type-item label:hover,
-.housing-type-item input:hover,
-.housing-type-item label:checked:hover {
+.control:hover {
   opacity: 0.6;
 }
 
-
-.custom-radio:checked:focus-visible,
-.custom-radio:focus-visible {
+.control:focus-visible {
   outline: 3px solid #83b3d3;
 }
 
-.housing-type-item input:checked:active,
-.housing-type-item label:active,
-.housing-type-item input:active,
-.housing-type-item label:checked:active {
+.control:active {
   opacity: 0.3;
 }
 
-.housing-type-list.list {
-  padding: 0;
-  margin: 0;
-}
 
-.filter-group.housing-type {
-  /* отступ на макете 140px+9,57px от слова Апартаменты */
-  margin-right: 150px;
-}
 
-.housing-type-item {
-  line-height: 23px;
-  margin-bottom: 12px;
-  margin-left: 3px;
-}
-
-.housing-type-item label {
-  cursor: pointer;
-}
+/* Здесь СТОИМОСТЬ */
 
 .filter-group.cost-range-group {
   position: relative;
 }
 
 .cost-rane-group .filter-group-title {
-  margin-bottom: 32px;
+  margin-bottom: 33px;
 }
 
 .start-cost,
@@ -1006,8 +1014,9 @@ address .contact-link {
 
 .price-bar-control::before {
   top: 46px;
+  left: 2px;
   background-color: #ffffff;
-  width: 227px;
+  width: 225px;
 }
 
 .price-bar-control::after {
@@ -1040,7 +1049,7 @@ address .contact-link {
 
 
 .price-scale-min-control {
-  left: 0;
+  left: 2px;
   top: 36px;
 }
 
