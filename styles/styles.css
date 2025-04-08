@@ -1739,7 +1739,6 @@ address .contact-link {
   font-size: 18px;
   line-height: 20px;
   text-align: center;
-  -moz-appearance: textfield;
 }
 
 .form-input-guest::-webkit-inner-spin-button,
@@ -1749,7 +1748,10 @@ address .contact-link {
 }
 
 
+.form-input-guest-firefox {
 
+  -moz-appearance: textfield;
+}
 
 
 
