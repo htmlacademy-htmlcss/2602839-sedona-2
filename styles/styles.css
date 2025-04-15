@@ -159,7 +159,7 @@ ul.navigation-user {
   content: "";
   right: 16px;
   left: 16px;
-  bottom: -2px;
+  bottom: -1px;
   height: 2px;
   background-color: #756157;
 }
@@ -235,22 +235,31 @@ ul.navigation-user {
 
 .navigation-user-item:nth-child(1) .navigation-user-link,
 .navigation-user-item:nth-child(2) .navigation-user-link {
-  display: block;
   width: 44px;
   height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-icon.navigation-user-link::after,
+.heart-icon.navigation-user-link::after {
+  display: block;
+  margin: 0 auto;
+  width: 20px;
+  height: 20px;
+  content: "";
 }
 
 .search-icon {
-  background-image: url("../images/icons/search.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url("../images/icons/search.svg") no-repeat center/cover;
+
   background-size: 20px 20px;
 }
 
 .heart-icon {
-  background-image: url("../images/icons/heart.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url("../images/icons/heart.svg") no-repeat center/cover;
+
   background-size: 20px 20px;
 }
 
@@ -262,7 +271,7 @@ ul.navigation-user {
   display: block;
   padding: 8px 34px;
   color: #ffffff;
-  margin-left: 20px;
+  margin-left: 18px;
 }
 
 .navigation-user-link:hover,
@@ -629,7 +638,7 @@ ul.navigation-user {
 .subscribe-email::placeholder {
   color: #000000;
   opacity: 0.6;
-  /* padding-left: 20px; */
+
   font-size: 18px;
   line-height: 24px;
 }
@@ -1185,7 +1194,7 @@ address .contact-link {
   display: flex;
   justify-content: start;
   align-items: center;
-  margin: 49px 0 39px 0;
+  margin: 50px 0 41px 0;
 }
 
 .hotels-found {
@@ -1306,6 +1315,10 @@ address .contact-link {
   grid-column: 1 /-1;
 }
 
+.hotels-item-link-img {
+  display: block;
+}
+
 .hotels-item-title {
   padding: 0;
   margin: 0;
@@ -1316,7 +1329,7 @@ address .contact-link {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
-  text-transform: capitalize;
+
 }
 
 .hotels-item-type {
