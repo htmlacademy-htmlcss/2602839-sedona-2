@@ -1835,7 +1835,7 @@ address .contact-link {
 
 
 .form-input-guest-firefox {
-
+  /* Убираем стрелочки для Firefox */
   -moz-appearance: textfield;
 }
 
