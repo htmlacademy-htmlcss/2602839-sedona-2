@@ -88,17 +88,20 @@ body {
     background-color: #615048;
     outline: 1px solid #615048;
     border-radius: 4px;
+    transition: 0.3s;
   }
 
   :focus-visible {
     background-color: #615048;
     outline: 1px solid #615048;
     border-radius: 4px;
+    transition: 0.3s;
   }
 
   :active {
     background-color: #756157;
     color: rgba(255, 255, 255, 0.3);
+    transition: 0.3s;
   }
 }
 
@@ -181,11 +184,13 @@ ul.navigation-user {
 .navigation-list-link:hover {
   color: #756157;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .navigation-list-link:active {
   opacity: 0.3;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .navigation-list-link {
@@ -264,16 +269,19 @@ ul.navigation-user {
 .navigation-user-link:focus-visible {
   background-color: #615048;
   color: #ffffff;
+  transition: 0.3s;
 }
 
 .navigation-user-link:active {
   background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
 }
 
 .navigation-user-link.button:disabled {
   background-color: #e5e5e5;
   color: #ffffff;
+  transition: 0.3s;
 }
 
 .like-number {
@@ -558,16 +566,19 @@ ul.navigation-user {
 .interested-link.button:focus-visible {
   background-color: #615048;
   color: #ffffff;
+  transition: 0.3s;
 }
 
 .interested-link.button:active {
   background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
 }
 
 .interested-link.button:disabled {
   background-color: #e5e5e5;
   color: #ffffff;
+  transition: 0.3s;
 }
 
 /* SUBSCRIBE */
@@ -644,16 +655,19 @@ ul.navigation-user {
 .subscribe-button:focus-visible {
   background-color: #68a2ca;
   color:#ffffff;
+  transition: 0.3s;
 }
 
 .subscribe-button:active {
   background-color: #82b3d3;
   color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
 }
 
 .subscribe-button:disabled {
   background-color: #e5e5e5;
   color:#ffffff;
+  transition: 0.3s;
 }
 
 /* FOOTER сайта */
@@ -689,16 +703,19 @@ ul.navigation-user {
 .footer-social-link:hover svg {
 
   color: #68a2ca;
+  transition: 0.3s;
 }
 
 .footer-social-link:focus-visible svg {
   color: #68a2ca;
 
+  transition: 0.3s;
 }
 
 .footer-social-link:active svg {
   color: rgba(104, 162, 202, 0.3);
 
+  transition: 0.3s;
 }
 
 address .contact-link {
@@ -720,14 +737,17 @@ address .contact-link {
 
 .footer-contacts:hover svg {
     color: #756157;
+    transition: 0.3s;
 }
 
 .footer-contacts:focus-visible svg {
     color: #756157;
+    transition: 0.3s;
 }
 
 .footer-contacts:active svg {
     color: rgba(117, 97, 87, 0.3);
+    transition: 0.3s;
 }
 
 
@@ -738,14 +758,17 @@ address .contact-link {
 
   :hover {
     color: #756157;
+    transition: 0.3s;
   }
 
   :focus-visible {
     color: #756157;
+    transition: 0.3s;
   }
 
   :active {
     color: rgba(117, 97, 87, 0.3);
+    transition: 0.3s;
   }
 }
 
@@ -933,14 +956,17 @@ address .contact-link {
 
 .control:hover {
   opacity: 0.6;
+  transition: 0.3s;
 }
 
 .control:focus-visible {
   outline: 3px solid #83b3d3;
+  transition: 0.3s;
 }
 
 .control:active {
   opacity: 0.3;
+  transition: 0.3s;
 }
 
 
@@ -982,7 +1008,8 @@ address .contact-link {
 
 .start-cost:focus-visible,
 .end-cost:focus-visible {
-  outline: 3px solid #83b3d3;;
+  outline: 3px solid #83b3d3;
+  transition: 0.3s;
 }
 
 
@@ -1048,10 +1075,12 @@ address .contact-link {
 
 .price-scale-toggle:focus-visible {
   outline: 3px solid #83b3d3;
+  transition: 0.3s;
 }
 
 .price-scale-toggle:active {
   outline: 2px solid #83b3d3;
+  transition: 0.3s;
 }
 
 
@@ -1124,18 +1153,22 @@ address .contact-link {
 
 .filter-buttons-cancel:hover {
   opacity: 0.6;
+  transition: 0.3s;
 }
 
 .filter-buttons-cancel:focus-visible {
   outline: 3px solid #83b3d3;
+  transition: 0.3s;
 }
 
 .filter-buttons-cancel:active {
   color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
 }
 
 .filter-buttons-cancel:disabled {
   color: rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
 }
 
 /* HOTELS catalog */
@@ -1187,11 +1220,13 @@ address .contact-link {
 .hotels-control:hover,
 .hotels-control:focus-visible {
   border-color: #68a2ca;
+  transition: 0.3s;
 }
 
 .hotels-control:disabled {
   opacity: 0.3;
   border: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
 }
 
 .hotels-control option {
@@ -1307,19 +1342,23 @@ address .contact-link {
 
 .hotels-item-detail:hover {
   background-color: #615048;
+  transition: 0.3s;
 }
 
 .hotels-item-detail:focus-visible {
   background-color: #615048;
+  transition: 0.3s;
 }
 
 .hotels-item-detail:active {
   background-color: #756157;
   opacity: 0.3;
+  transition: 0.3s;
 }
 
 .hotels-item-detail:disabled {
   background-color: #e5e5e5;
+  transition: 0.3s;
 }
 
 .hotels-item-favorites-button {
@@ -1339,19 +1378,23 @@ address .contact-link {
 
 .hotels-item-favorites-button:hover {
   background-color: #68a2ca;
+  transition: 0.3s;
 }
 
 .hotels-item-favorites-button:focus-visible {
   background-color: #68a2ca;
+  transition: 0.3s;
 }
 
 .hotels-item-favorites-button:active {
   background-color: #82b3d3;
   color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
 }
 
 .hotels-item-favorites-button:disabled {
   background-color: #e5e5e5;
+  transition: 0.3s;
 }
 
 
@@ -1364,20 +1407,24 @@ address .contact-link {
 
 .hotels-item-favorites-button:hover.favorite-checked {
   background-color: #6c9e42;
+  transition: 0.3s;
 }
 
 .hotels-item-favorites-button:focus-visible.favorite-checked {
   background-color: #6c9e42;
+  transition: 0.3s;
 }
 
 .hotels-item-favorites-button:active.favorite-checked {
   background-color: #6c9e42;
   color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
 
 }
 
 .hotels-item-favorites-button:disabled.favorite-checked {
   background-color: #e5e5e5;
+  transition: 0.3s;
 }
 
 
@@ -1454,17 +1501,20 @@ address .contact-link {
     background-color: #68a2ca;
     outline: 1px solid #82b3d3;
     border-radius: 4px;
+    transition: 0.3s;
   }
 
   :focus-visible {
     background-color: #68a2ca;
     outline: 1px solid #82b3d3;
     border-radius: 4px;
+    transition: 0.3s;
   }
 
   :active {
     background-color: #82b3d3;
     color: rgba(255, 255, 255, 0.3);
+    transition: 0.3s;
   }
 
 }
@@ -1478,12 +1528,14 @@ address .contact-link {
     color: #000000;
     background-color: #f2f2f2;
     outline: 1px solid #f2f2f2;
+    transition: 0.3s;
   }
 
   :focus-visible {
     color: #000000;
     background-color: #f2f2f2;
     outline: 1px solid #f2f2f2;
+    transition: 0.3s;
   }
 
 
@@ -1491,6 +1543,7 @@ address .contact-link {
     color: #000000;
     background-color: #f2f2f2;
     outline: 1px solid #f2f2f2;
+    transition: 0.3s;
   }
 }
 
@@ -1502,18 +1555,21 @@ address .contact-link {
     color: #000000;
     background: none;
     outline: 1px solid #82b3d3;
+    transition: 0.3s;
   }
 
   :focus-visible {
     color: #000000;
     background: none;
     outline: 1px solid #82b3d3;
+    transition: 0.3s;
   }
 
   :active {
     color: #000000;
     background: none;
     outline: 1px solid #82b3d3;
+    transition: 0.3s;
   }
 }
 
@@ -1604,19 +1660,23 @@ address .contact-link {
 
 .modal-close-button:hover {
   background-color: #e6e6e6;
+  transition: 0.3s;
 }
 
 .modal-close-button:focus-visible {
   outline: 3px solid #83b3d3;
+  transition: 0.3s;
 }
 
 .modal-close-button:focus {
   background-color: #e6e6e6;
+  transition: 0.3s;
 }
 
 .modal-close-button:active {
   background-color: #e6e6e6;
   color: rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
 }
 
 .form-container {
@@ -1677,19 +1737,23 @@ address .contact-link {
 
 .calendar-button:hover {
   opacity: 1;
+  transition: 0.3s;
 }
 
 .calendar-button:focus-visible {
   outline: 3px solid #83b3d3;
+  transition: 0.3s;
 }
 
 .calendar-button:focus {
   opacity: 1;
   border-radius: 4px;
+  transition: 0.3s;
 }
 
 .calendar-button:active {
   opacity: 0.2;
+  transition: 0.3s;
 }
 
 .message {
@@ -1717,6 +1781,7 @@ address .contact-link {
 
 .form-input:disabled {
   opacity: 30%;
+  transition: 0.3s;
 }
 
 .input-element {
@@ -1785,19 +1850,23 @@ address .contact-link {
 
 .plus-minus-button:hover {
   opacity: 1;
+  transition: 0.3s;
 }
 
 .plus-minus-button:focus-visible {
   outline: 3px solid #83b3d3;
+  transition: 0.3s;
 }
 
 .plus-minus-button:focus {
   opacity: 1;
   border-radius: 4px;
+  transition: 0.3s;
 }
 
 .plus-minus-button:active {
   opacity: 0.2;
+  transition: 0.3s;
 }
 
 .tooltip-input {
