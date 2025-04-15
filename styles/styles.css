@@ -943,7 +943,7 @@ address .contact-link {
   cursor: pointer;
 }
 
-.custom-checkbox[type="checkbox"]:checked + .control-mark {
+.custom-checkbox:checked + .control-mark {
   position: absolute;
   background-image: url("../images/icons/checked-icon.svg");
   background-position: center;
@@ -951,7 +951,7 @@ address .contact-link {
   background-repeat: no-repeat;
   content: "";
 }
-.custom-radio[type="radio"]:checked + .control-mark::after {
+.custom-radio:checked + .control-mark::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -961,6 +961,14 @@ address .contact-link {
   width: 10px;
   height: 10px;
   content: "";
+}
+
+.custom-checkbox:focus + .control-mark {
+  outline: 3px solid #83b3d3;
+}
+
+.custom-radio:focus + .control-mark {
+  outline: 3px solid #83b3d3;
 }
 
 .control:hover {
