@@ -272,6 +272,7 @@ ul.navigation-user {
   padding: 8px 34px;
   color: #ffffff;
   margin-left: 18px;
+  text-align: center;
 }
 
 .navigation-user-link:hover,
@@ -569,6 +570,7 @@ ul.navigation-user {
   text-transform: uppercase;
   padding: 8px 50px;
   border-radius: 4px;
+  text-align: center;
 }
 
 .interested-link.button:hover,
@@ -606,6 +608,7 @@ ul.navigation-user {
 .subscribe-title {
   color: #ffffff;
   margin: 96px auto 0;
+  text-align: center;
 }
 
 .subscribe-text {
@@ -625,11 +628,11 @@ ul.navigation-user {
 
 .subscribe-email {
   width: 452px;
-  height: 52px;
+  border: none;
   background-color: #f2f2f2;
   line-height: 24px;
   font-family: inherit;
-  border-width: 0;
+
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   padding-left: 20px;
@@ -690,9 +693,13 @@ ul.navigation-user {
   padding: 26px 70px 30px;
 }
 
+.footer-social {
+  max-width: 150px;
+}
+
 .footer-social-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   flex-wrap: wrap;
   padding: 0;
@@ -741,7 +748,11 @@ address .contact-link {
   text-transform: uppercase;
   text-align: center;
   color: #000000;
-
+  max-width: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer-contacts:hover svg {
@@ -828,6 +839,7 @@ address .contact-link {
 .catalog-filters {
   display: flex;
   justify-content: start;
+  flex-wrap: wrap;
   margin: 0 70px;
 }
 
