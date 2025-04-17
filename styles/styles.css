@@ -135,6 +135,14 @@ body {
   z-index: 2;
 }
 
+.header-logo:hover {
+  opacity: 0.8;
+}
+
+.header-logo:active {
+  opacity: 0.3;
+}
+
 ul.navigation-list,
 ul.navigation-user {
   margin: 0;
@@ -666,7 +674,7 @@ ul.navigation-user {
 .subscribe-button:hover,
 .subscribe-button:focus-visible {
   background-color: #68a2ca;
-  color:#ffffff;
+  color: #ffffff;
   transition: 0.3s;
 }
 
@@ -678,7 +686,7 @@ ul.navigation-user {
 
 .subscribe-button:disabled {
   background-color: #e5e5e5;
-  color:#ffffff;
+  color: #ffffff;
   transition: 0.3s;
 }
 
@@ -742,6 +750,21 @@ address .contact-link {
   color: inherit;
 }
 
+  .contact-link:hover {
+    color: #756157;
+    transition: 0.3s;
+  }
+
+  .contact-link:focus-visible {
+    color: #756157;
+    transition: 0.3s;
+  }
+
+  .contact-link:active {
+    color: rgba(117, 97, 87, 0.3);
+    transition: 0.3s;
+  }
+
 .footer-contacts {
   font-size: 40px;
   line-height: 40px;
@@ -753,21 +776,6 @@ address .contact-link {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-}
-
-.footer-contacts:hover svg {
-    color: #756157;
-    transition: 0.3s;
-}
-
-.footer-contacts:focus-visible svg {
-    color: #756157;
-    transition: 0.3s;
-}
-
-.footer-contacts:active svg {
-    color: rgba(117, 97, 87, 0.3);
-    transition: 0.3s;
 }
 
 
@@ -822,6 +830,14 @@ address .contact-link {
   margin-right: 28px;
   font-size: 16px;
   line-height: 21px;
+}
+
+.breadcrumbs-item-link:hover svg {
+  opacity: 0.6;
+}
+
+.breadcrumbs-item-link:active svg {
+  opacity: 0.3;
 }
 
 .breadcrumbs-item:not(:last-child)::after {
@@ -963,6 +979,7 @@ address .contact-link {
   background-repeat: no-repeat;
   content: "";
 }
+
 .custom-radio:checked + .control-mark::after {
   position: absolute;
   top: 50%;
@@ -1112,6 +1129,12 @@ address .contact-link {
   background: #ffffff;
   width: 20px;
   height: 20px;
+  z-index: 1;
+}
+
+.price-scale-toggle:hover {
+  outline: 3px solid #82b3d3;
+  transition: 0.3s;
 }
 
 .price-scale-toggle:focus-visible {
@@ -1174,7 +1197,7 @@ address .contact-link {
 .filter-buttons-accept:hover,
 .filter-buttons-accept:focus-visible {
   background-color: #68a2ca;
-  color:#ffffff;
+  color: #ffffff;
 }
 
 .filter-buttons-accept:active {
@@ -1184,7 +1207,7 @@ address .contact-link {
 
 .filter-buttons-accept:disabled {
   background-color: #e5e5e5;
-  color:#ffffff;
+  color: #ffffff;
 }
 
 .filter-buttons-cancel {
@@ -1294,6 +1317,11 @@ address .contact-link {
   align-items: center;
 }
 
+.hotels-sort-link:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
 .hotels-sort-link::after {
   display: block;
   margin: 0 auto;
@@ -1361,7 +1389,11 @@ address .contact-link {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
+}
 
+.hotels-item-title:hover {
+  opacity: 0.8;
+  transition: 0.3s;
 }
 
 .hotels-item-type {
