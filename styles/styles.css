@@ -983,6 +983,18 @@ address .contact-link {
   outline: 3px solid #83b3d3;
 }
 
+.custom-checkbox:disabled ~ .control-label,
+.custom-checkbox:disabled + .control-mark {
+  cursor: not-allowed;
+  opacity: 0.1;
+}
+
+.custom-radio:disabled ~ .control-label,
+.custom-radio:disabled + .control-mark {
+  cursor: not-allowed;
+  opacity: 0.1;
+}
+
 .control:hover {
   opacity: 0.6;
   transition: 0.3s;
@@ -1813,7 +1825,7 @@ address .contact-link {
 }
 
 .form-input:disabled {
-  opacity: 30%;
+  opacity: 10%;
   transition: 0.3s;
 }
 
