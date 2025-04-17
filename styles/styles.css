@@ -88,17 +88,20 @@ body {
     background-color: #615048;
     outline: 1px solid #615048;
     border-radius: 4px;
+    transition: 0.3s;
   }
 
   :focus-visible {
     background-color: #615048;
     outline: 1px solid #615048;
     border-radius: 4px;
+    transition: 0.3s;
   }
 
   :active {
     background-color: #756157;
     color: rgba(255, 255, 255, 0.3);
+    transition: 0.3s;
   }
 }
 
@@ -156,7 +159,7 @@ ul.navigation-user {
   content: "";
   right: 16px;
   left: 16px;
-  bottom: -2px;
+  bottom: -1px;
   height: 2px;
   background-color: #756157;
 }
@@ -181,11 +184,13 @@ ul.navigation-user {
 .navigation-list-link:hover {
   color: #756157;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .navigation-list-link:active {
   opacity: 0.3;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .navigation-list-link {
@@ -230,22 +235,31 @@ ul.navigation-user {
 
 .navigation-user-item:nth-child(1) .navigation-user-link,
 .navigation-user-item:nth-child(2) .navigation-user-link {
-  display: block;
   width: 44px;
   height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-icon.navigation-user-link::after,
+.heart-icon.navigation-user-link::after {
+  display: block;
+  margin: 0 auto;
+  width: 20px;
+  height: 20px;
+  content: "";
 }
 
 .search-icon {
-  background-image: url("../images/icons/search.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url("../images/icons/search.svg") no-repeat center/cover;
+
   background-size: 20px 20px;
 }
 
 .heart-icon {
-  background-image: url("../images/icons/heart.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+  background: url("../images/icons/heart.svg") no-repeat center/cover;
+
   background-size: 20px 20px;
 }
 
@@ -257,23 +271,27 @@ ul.navigation-user {
   display: block;
   padding: 8px 34px;
   color: #ffffff;
-  margin-left: 20px;
+  margin-left: 18px;
+  text-align: center;
 }
 
 .navigation-user-link:hover,
 .navigation-user-link:focus-visible {
   background-color: #615048;
   color: #ffffff;
+  transition: 0.3s;
 }
 
 .navigation-user-link:active {
   background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
 }
 
 .navigation-user-link.button:disabled {
   background-color: #e5e5e5;
   color: #ffffff;
+  transition: 0.3s;
 }
 
 .like-number {
@@ -552,22 +570,26 @@ ul.navigation-user {
   text-transform: uppercase;
   padding: 8px 50px;
   border-radius: 4px;
+  text-align: center;
 }
 
 .interested-link.button:hover,
 .interested-link.button:focus-visible {
   background-color: #615048;
   color: #ffffff;
+  transition: 0.3s;
 }
 
 .interested-link.button:active {
   background-color: #756157;
   color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
 }
 
 .interested-link.button:disabled {
   background-color: #e5e5e5;
   color: #ffffff;
+  transition: 0.3s;
 }
 
 /* SUBSCRIBE */
@@ -586,6 +608,7 @@ ul.navigation-user {
 .subscribe-title {
   color: #ffffff;
   margin: 96px auto 0;
+  text-align: center;
 }
 
 .subscribe-text {
@@ -605,11 +628,11 @@ ul.navigation-user {
 
 .subscribe-email {
   width: 452px;
-  height: 52px;
+  border: none;
   background-color: #f2f2f2;
   line-height: 24px;
   font-family: inherit;
-  border-width: 0;
+
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   padding-left: 20px;
@@ -618,7 +641,7 @@ ul.navigation-user {
 .subscribe-email::placeholder {
   color: #000000;
   opacity: 0.6;
-  /* padding-left: 20px; */
+
   font-size: 18px;
   line-height: 24px;
 }
@@ -644,16 +667,19 @@ ul.navigation-user {
 .subscribe-button:focus-visible {
   background-color: #68a2ca;
   color:#ffffff;
+  transition: 0.3s;
 }
 
 .subscribe-button:active {
   background-color: #82b3d3;
   color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
 }
 
 .subscribe-button:disabled {
   background-color: #e5e5e5;
   color:#ffffff;
+  transition: 0.3s;
 }
 
 /* FOOTER сайта */
@@ -667,9 +693,13 @@ ul.navigation-user {
   padding: 26px 70px 30px;
 }
 
+.footer-social {
+  max-width: 150px;
+}
+
 .footer-social-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   flex-wrap: wrap;
   padding: 0;
@@ -689,16 +719,19 @@ ul.navigation-user {
 .footer-social-link:hover svg {
 
   color: #68a2ca;
+  transition: 0.3s;
 }
 
 .footer-social-link:focus-visible svg {
   color: #68a2ca;
 
+  transition: 0.3s;
 }
 
 .footer-social-link:active svg {
   color: rgba(104, 162, 202, 0.3);
 
+  transition: 0.3s;
 }
 
 address .contact-link {
@@ -715,19 +748,26 @@ address .contact-link {
   text-transform: uppercase;
   text-align: center;
   color: #000000;
-
+  max-width: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer-contacts:hover svg {
     color: #756157;
+    transition: 0.3s;
 }
 
 .footer-contacts:focus-visible svg {
     color: #756157;
+    transition: 0.3s;
 }
 
 .footer-contacts:active svg {
     color: rgba(117, 97, 87, 0.3);
+    transition: 0.3s;
 }
 
 
@@ -738,14 +778,17 @@ address .contact-link {
 
   :hover {
     color: #756157;
+    transition: 0.3s;
   }
 
   :focus-visible {
     color: #756157;
+    transition: 0.3s;
   }
 
   :active {
     color: rgba(117, 97, 87, 0.3);
+    transition: 0.3s;
   }
 }
 
@@ -796,6 +839,7 @@ address .contact-link {
 .catalog-filters {
   display: flex;
   justify-content: start;
+  flex-wrap: wrap;
   margin: 0 70px;
 }
 
@@ -911,7 +955,7 @@ address .contact-link {
   cursor: pointer;
 }
 
-.custom-checkbox[type="checkbox"]:checked + .control-mark {
+.custom-checkbox:checked + .control-mark {
   position: absolute;
   background-image: url("../images/icons/checked-icon.svg");
   background-position: center;
@@ -919,7 +963,7 @@ address .contact-link {
   background-repeat: no-repeat;
   content: "";
 }
-.custom-radio[type="radio"]:checked + .control-mark::after {
+.custom-radio:checked + .control-mark::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -931,16 +975,27 @@ address .contact-link {
   content: "";
 }
 
+.custom-checkbox:focus + .control-mark {
+  outline: 3px solid #83b3d3;
+}
+
+.custom-radio:focus + .control-mark {
+  outline: 3px solid #83b3d3;
+}
+
 .control:hover {
   opacity: 0.6;
+  transition: 0.3s;
 }
 
 .control:focus-visible {
   outline: 3px solid #83b3d3;
+  transition: 0.3s;
 }
 
 .control:active {
   opacity: 0.3;
+  transition: 0.3s;
 }
 
 
@@ -982,7 +1037,8 @@ address .contact-link {
 
 .start-cost:focus-visible,
 .end-cost:focus-visible {
-  outline: 3px solid #83b3d3;;
+  outline: 3px solid #83b3d3;
+  transition: 0.3s;
 }
 
 
@@ -1048,10 +1104,12 @@ address .contact-link {
 
 .price-scale-toggle:focus-visible {
   outline: 3px solid #83b3d3;
+  transition: 0.3s;
 }
 
 .price-scale-toggle:active {
   outline: 2px solid #83b3d3;
+  transition: 0.3s;
 }
 
 
@@ -1124,18 +1182,22 @@ address .contact-link {
 
 .filter-buttons-cancel:hover {
   opacity: 0.6;
+  transition: 0.3s;
 }
 
 .filter-buttons-cancel:focus-visible {
   outline: 3px solid #83b3d3;
+  transition: 0.3s;
 }
 
 .filter-buttons-cancel:active {
   color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
 }
 
 .filter-buttons-cancel:disabled {
   color: rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
 }
 
 /* HOTELS catalog */
@@ -1152,7 +1214,7 @@ address .contact-link {
   display: flex;
   justify-content: start;
   align-items: center;
-  margin: 49px 0 39px 0;
+  margin: 50px 0 41px 0;
 }
 
 .hotels-found {
@@ -1187,11 +1249,13 @@ address .contact-link {
 .hotels-control:hover,
 .hotels-control:focus-visible {
   border-color: #68a2ca;
+  transition: 0.3s;
 }
 
 .hotels-control:disabled {
   opacity: 0.3;
   border: 2px solid rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
 }
 
 .hotels-control option {
@@ -1271,6 +1335,10 @@ address .contact-link {
   grid-column: 1 /-1;
 }
 
+.hotels-item-link-img {
+  display: block;
+}
+
 .hotels-item-title {
   padding: 0;
   margin: 0;
@@ -1281,7 +1349,7 @@ address .contact-link {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
-  text-transform: capitalize;
+
 }
 
 .hotels-item-type {
@@ -1307,19 +1375,23 @@ address .contact-link {
 
 .hotels-item-detail:hover {
   background-color: #615048;
+  transition: 0.3s;
 }
 
 .hotels-item-detail:focus-visible {
   background-color: #615048;
+  transition: 0.3s;
 }
 
 .hotels-item-detail:active {
   background-color: #756157;
   opacity: 0.3;
+  transition: 0.3s;
 }
 
 .hotels-item-detail:disabled {
   background-color: #e5e5e5;
+  transition: 0.3s;
 }
 
 .hotels-item-favorites-button {
@@ -1339,19 +1411,23 @@ address .contact-link {
 
 .hotels-item-favorites-button:hover {
   background-color: #68a2ca;
+  transition: 0.3s;
 }
 
 .hotels-item-favorites-button:focus-visible {
   background-color: #68a2ca;
+  transition: 0.3s;
 }
 
 .hotels-item-favorites-button:active {
   background-color: #82b3d3;
   color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
 }
 
 .hotels-item-favorites-button:disabled {
   background-color: #e5e5e5;
+  transition: 0.3s;
 }
 
 
@@ -1364,20 +1440,24 @@ address .contact-link {
 
 .hotels-item-favorites-button:hover.favorite-checked {
   background-color: #6c9e42;
+  transition: 0.3s;
 }
 
 .hotels-item-favorites-button:focus-visible.favorite-checked {
   background-color: #6c9e42;
+  transition: 0.3s;
 }
 
 .hotels-item-favorites-button:active.favorite-checked {
   background-color: #6c9e42;
   color: rgba(255, 255, 255, 0.3);
+  transition: 0.3s;
 
 }
 
 .hotels-item-favorites-button:disabled.favorite-checked {
   background-color: #e5e5e5;
+  transition: 0.3s;
 }
 
 
@@ -1454,17 +1534,20 @@ address .contact-link {
     background-color: #68a2ca;
     outline: 1px solid #82b3d3;
     border-radius: 4px;
+    transition: 0.3s;
   }
 
   :focus-visible {
     background-color: #68a2ca;
     outline: 1px solid #82b3d3;
     border-radius: 4px;
+    transition: 0.3s;
   }
 
   :active {
     background-color: #82b3d3;
     color: rgba(255, 255, 255, 0.3);
+    transition: 0.3s;
   }
 
 }
@@ -1478,12 +1561,14 @@ address .contact-link {
     color: #000000;
     background-color: #f2f2f2;
     outline: 1px solid #f2f2f2;
+    transition: 0.3s;
   }
 
   :focus-visible {
     color: #000000;
     background-color: #f2f2f2;
     outline: 1px solid #f2f2f2;
+    transition: 0.3s;
   }
 
 
@@ -1491,6 +1576,7 @@ address .contact-link {
     color: #000000;
     background-color: #f2f2f2;
     outline: 1px solid #f2f2f2;
+    transition: 0.3s;
   }
 }
 
@@ -1502,18 +1588,21 @@ address .contact-link {
     color: #000000;
     background: none;
     outline: 1px solid #82b3d3;
+    transition: 0.3s;
   }
 
   :focus-visible {
     color: #000000;
     background: none;
     outline: 1px solid #82b3d3;
+    transition: 0.3s;
   }
 
   :active {
     color: #000000;
     background: none;
     outline: 1px solid #82b3d3;
+    transition: 0.3s;
   }
 }
 
@@ -1604,19 +1693,23 @@ address .contact-link {
 
 .modal-close-button:hover {
   background-color: #e6e6e6;
+  transition: 0.3s;
 }
 
 .modal-close-button:focus-visible {
   outline: 3px solid #83b3d3;
+  transition: 0.3s;
 }
 
 .modal-close-button:focus {
   background-color: #e6e6e6;
+  transition: 0.3s;
 }
 
 .modal-close-button:active {
   background-color: #e6e6e6;
   color: rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
 }
 
 .form-container {
@@ -1677,19 +1770,23 @@ address .contact-link {
 
 .calendar-button:hover {
   opacity: 1;
+  transition: 0.3s;
 }
 
 .calendar-button:focus-visible {
   outline: 3px solid #83b3d3;
+  transition: 0.3s;
 }
 
 .calendar-button:focus {
   opacity: 1;
   border-radius: 4px;
+  transition: 0.3s;
 }
 
 .calendar-button:active {
   opacity: 0.2;
+  transition: 0.3s;
 }
 
 .message {
@@ -1717,6 +1814,7 @@ address .contact-link {
 
 .form-input:disabled {
   opacity: 30%;
+  transition: 0.3s;
 }
 
 .input-element {
@@ -1749,7 +1847,7 @@ address .contact-link {
 
 
 .form-input-guest-firefox {
-
+  /* Убираем стрелочки для Firefox */
   -moz-appearance: textfield;
 }
 
@@ -1785,19 +1883,23 @@ address .contact-link {
 
 .plus-minus-button:hover {
   opacity: 1;
+  transition: 0.3s;
 }
 
 .plus-minus-button:focus-visible {
   outline: 3px solid #83b3d3;
+  transition: 0.3s;
 }
 
 .plus-minus-button:focus {
   opacity: 1;
   border-radius: 4px;
+  transition: 0.3s;
 }
 
 .plus-minus-button:active {
   opacity: 0.2;
+  transition: 0.3s;
 }
 
 .tooltip-input {
