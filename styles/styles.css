@@ -229,6 +229,7 @@ ul.navigation-user {
   text-decoration: none;
   padding-left: 23px;
   padding-right: 23px;
+  position: relative;
 }
 
 .navigation-icon {
@@ -241,8 +242,7 @@ ul.navigation-user {
   color: #000000;
 }
 
-.navigation-user-item:nth-child(1) .navigation-user-link,
-.navigation-user-item:nth-child(2) .navigation-user-link {
+.navigation-user-item:not(:last-child) .navigation-user-link {
   width: 44px;
   height: 64px;
   display: flex;
@@ -567,8 +567,8 @@ ul.navigation-user {
 
 .interested-text {
   font-size: 22px;
-  line-height: 28px;
-  margin: 18px auto 51px;
+  line-height: 26px;
+  margin: 19px auto 54px;
   text-align: center;
 }
 
@@ -625,7 +625,7 @@ ul.navigation-user {
   font-size: 22px;
   line-height: 26px;
   margin-top: 20px;
-  margin-bottom: 54px;
+  margin-bottom: 55px;
   text-align: center;
 }
 
@@ -700,7 +700,7 @@ ul.navigation-user {
   align-items: center;
   flex-wrap: wrap;
   margin: 0 auto;
-  padding: 26px 70px 30px;
+  padding: 27px 70px 30px;
 }
 
 .footer-social {
