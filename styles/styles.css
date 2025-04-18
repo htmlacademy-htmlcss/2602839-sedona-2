@@ -174,7 +174,7 @@ ul.navigation-user {
 
 .navigation-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   flex-wrap: wrap;
 
 }
@@ -394,6 +394,7 @@ ul.navigation-user {
 
 .advantages-item img {
   height: 100%;
+  object-fit: cover;
 }
 
 .advantages-item-title {
@@ -623,6 +624,7 @@ ul.navigation-user {
   padding: 0 366px;
   font-size: 22px;
   line-height: 26px;
+  margin-top: 20px;
   margin-bottom: 54px;
   text-align: center;
 }
@@ -643,7 +645,7 @@ ul.navigation-user {
 
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
-  padding-left: 20px;
+  padding: 13px 20px 12px 20px;
 }
 
 .subscribe-email::placeholder {
@@ -964,7 +966,7 @@ address .contact-link {
 
 .filter-group.housing-type {
   /* отступ на макете 140px+9,57px от слова Апартаменты */
-  margin-right: 148px;
+  margin-right: 149px;
 }
 
 .housing-type-item label {
@@ -1036,7 +1038,7 @@ address .contact-link {
 }
 
 .cost-rane-group .filter-group-title {
-  margin-bottom: 33px;
+  margin-bottom: 32px;
 }
 
 .start-cost,
@@ -1249,7 +1251,7 @@ address .contact-link {
   display: flex;
   justify-content: start;
   align-items: center;
-  margin: 50px 0 41px 0;
+  margin: 49px 0 41px 0;
 }
 
 .hotels-found {
@@ -1269,7 +1271,7 @@ address .contact-link {
   background-image: url("../images/icons/select.svg");
   background-repeat: no-repeat;
   background-size: 12px 9px;
-  background-position: center right 20px;
+  background-position: center right 17px;
   border-radius: 4px;
   font-size: 18px;
   line-height: 21px;
@@ -1529,11 +1531,11 @@ address .contact-link {
   line-height: 20px;
   text-transform: uppercase;
   width: 140px;
-  height: 37px;
+  padding: 9px 5px;
   background-color: #f2f2f2;
   border-radius: 4px;
   margin: 0;
-  white-space: pre;
+  white-space: pre-wrap;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1551,6 +1553,7 @@ address .contact-link {
 .pagination-list {
   display: flex;
   justify-content: start;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
   gap: 8px;
