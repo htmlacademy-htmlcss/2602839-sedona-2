@@ -421,7 +421,7 @@ ul.navigation-user {
   content: "";
 }
 
-.advantages-item-wide .advantages-card .advantages-item-title::after {
+.advantages-card-wide .advantages-item-title::after {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -465,11 +465,11 @@ ul.navigation-user {
   }
 }
 
-.advantages-item-wide {
+.advantages-card-wide{
   display: flex;
 }
 
-.advantages-item-reverse {
+.advantages-card-reverse {
   flex-direction: row-reverse;
 }
 
