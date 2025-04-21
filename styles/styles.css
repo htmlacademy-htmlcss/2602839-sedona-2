@@ -176,7 +176,7 @@ ul.navigation-user {
   display: flex;
   justify-content: start;
   flex-wrap: wrap;
-
+  max-width: 550px;
 }
 
 .navigation-list.list {
@@ -281,6 +281,7 @@ ul.navigation-user {
   color: #ffffff;
   margin-left: 18px;
   text-align: center;
+  max-width: 160px;
 }
 
 .navigation-user-link:hover,
@@ -365,7 +366,7 @@ ul.navigation-user {
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-wrap: wrap;
 }
 
@@ -493,7 +494,7 @@ ul.navigation-user {
 
 .advice-list {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
@@ -905,8 +906,9 @@ address .contact-link {
 }
 
 .filter-group.infrastructure {
-  margin-right: 70px;
-  padding: 0;
+  margin: 0;
+  padding: 0 70px 0 0;
+  max-width: 220px;
 }
 
 .infrastructure-item {
@@ -922,24 +924,22 @@ address .contact-link {
 }
 
 .infrastructure-item .control-label {
-  display: inline-block;
   margin-left: 14px;
 }
 
 .housing-type-item {
+  position: relative;
   line-height: 23px;
   margin-bottom: 16px;
-  position: relative;
 }
 
 .housing-type-item .control-label {
-  display: inline-block;
   margin-left: 14px;
 }
 
 .control {
   position: relative;
-  display: block;
+
 }
 
 /* Mark */
@@ -966,7 +966,9 @@ address .contact-link {
 
 .filter-group.housing-type {
   /* отступ на макете 140px+9,57px от слова Апартаменты */
-  margin-right: 149px;
+  margin: 0;
+  padding: 0 149px 0 0;
+  max-width: 290px;
 }
 
 .housing-type-item label {
@@ -1319,9 +1321,15 @@ address .contact-link {
   align-items: center;
 }
 
-.hotels-sort-link:hover {
-  opacity: 0.8;
+.hotels-sort-link:hover,
+.hotels-sort-link:active {
   transition: 0.3s;
+  border: 2px solid #000000;
+}
+
+.hotels-sort-link:focus-visible {
+  transition: 0.3s;
+  border: 2px solid #68a2ca;
 }
 
 .hotels-sort-link::after {
